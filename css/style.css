@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&display=swap");
+
+/*
+=============== 
+Global Styles
+===============
+*/
+:root {
+  font-size: 10px;
+  --clr-black: #000;
+  --clr-bcg: #fff;
+  --clr-font: #020202;
+  --clr-primary: #e500be;
+  --clr-grey: #eb00c3;
+  --clr-btn: #b7b7b7;
+  --transition: all 0.3s linear;
+}
+
+.white-theme {
+  --clr-bcg: #fff;
+  --clr-font: #020202;
+  --clr-primary: #e500be;
+  --clr-grey: #eb00c3;
+  --clr-btn: #b7b7b7;
+}
+
+.gray-theme {
+  --clr-bcg: #ddd;
+  --clr-font: #020202;
+  --clr-primary: #3c3c76;
+  --clr-grey: #7e7ec1;
+}
+
+.dark-theme {
+  /*   --clr-bcg: #282c35; */
+  --clr-font: #fff;
+  --clr-primary: #b3b3f9;
+  --clr-grey: #d8d7ff;
+  --clr-bcg: url("https://images.unsplash.com/photo-1624043122202-a3784671aba0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  --bdg-filter: blur(2px) brightness(0.1);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=============== 
+Common
+===============
+*/
+
+body {
+  writing-mode: tb-rl;
+  direction: ltr;
+  overflow: scroll;
+  /*   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho ProN",
+    "Hiragino Mincho ProN W3", "Noto Serif JP", "游明朝", YuMincho, "HG明朝E",
+    "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif; */
+  font-family: "Noto Serif JP", serif;
+  padding: 20px;
+  background: var(--clr-bcg);
+  backdrop-filter: var(--bdg-filter);
+  color: var(--clr-font);
+}
+
+h1 {
+  color: var(--clr-primary);
+  font-size: 3.6rem;
+}
+h2 {
+  color: var(--clr-primary);
+  font-size: 3rem;
+}
+h3 {
+  color: var(--clr-grey);
+  font-size: 2.4rem;
+}
+p {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.6;
+}
+.btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 80px auto;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  margin-left: 5rem;
+}
+
+.colors > .btn {
+  width: 20px;
+  height: 20px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.colors .btn.white {
+  background: #fff;
+  border: 1px solid #000;
+}
+.colors .btn.gray {
+  background: #b3b2b2;
+  border: 1px solid #b3b2b2;
+}
+.colors .btn.black {
+  background: #000;
+  border: 1px solid #000;
+}
+.toggle-icon i {
+  transition: var(--transition);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+.title {
+  margin-left: 5rem;
+}
+
+.nav .nav-title {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 6rem auto;
+  grid-template-areas: "a b";
+  column-gap: 10px;
+  margin-left: 1rem;
+}
+.nav h2 {
+  align-self: self-start;
+}
+.nav h3 {
+  color: var(--clr-font);
+}
+.nav .translate {
+  align-self: center;
+}
+.nav .translate-btn {
+  color: var(--clr-grey);
+}
+.nav .translate-text {
+  padding-top: 2rem;
+}
+
+.section {
+  /*   margin-left: 5rem; */
+  position: relative;
+}
+.section h3 {
+  margin: 0 3rem;
+}
+.section p {
+  padding: 1rem 0 0 1rem;
+  /*   text-indent: 1em; */
+}
+.section .kobun-text p::first-letter {
+  font-size: 110%;
+  font-weight: bold;
+}
+/*
+=============== 
+Parts
+===============
+*/
+
+.gion {
+  padding: 2rem;
+  font-weight: 1000;
+}
+.indent {
+  letter-spacing: -0.06rem;
+}
+.indent02 {
+  letter-spacing: -0.18rem;
+}
+
+/* translate */
+.minus-icon {
+  display: none;
+}
+.translate-text {
+  /*    display:none; */
+  opacity: 0.6;
+  max-width: 0;
+  transition: var(--transition);
+  overflow: hidden;
+}
+.show-text .minus-icon {
+  display: block;
+}
+.show-text .plus-icon {
+  display: none;
+}
+.show-text .translate-text {
+  /*     display:block; */
+  opacity: 1;
+  max-width: 100%;
+}
+
+.section .border-btn {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  opacity: 0.4;
+  transition: var(--transition);
+}
+.section .border01,
+.section .border02 {
+  border-right: 1px solid var(--clr-btn);
+  height: 30vh;
+}
+.section .border01 {
+  justify-self: self-end;
+}
+.section .border02 {
+  justify-self: self-start;
+}
+
+.section .translate-btn {
+  color: var(--clr-btn);
+}
+.section .border-btn:hover,
+.section .translate-btn:hover {
+  opacity: 1;
+}
+
+.section .translate-text p {
+  padding: 1rem 2rem 0 2rem;
+  /*   font-family: 'Kiwi Maru', serif; */
+  font-weight: 200;
+}
+.section .kobun-text {
+  position: relative;
+}
+.section .translate {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+}
+.red {
+  red: red;
+}
+
+.loader {
+  writing-mode: lr-tb;
+  font-size: 3.6rem;
+  z-index: 99;
+  margin: auto;
+}
+.success {
+  display: none;
+}
+
+.section .translate-text .phrase-text {
+  border: 1px solid var(--clr-font);
+  height: 70vh;
+  margin: 3rem 2rem;
+}
+.section .translate-text .phrase-text li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 0;
+}
+.section .translate-text .phrase-text h4 {
+  font-size: 1.8rem;
+}
+.section .translate-text .phrase-text p {
+  padding: 0;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
