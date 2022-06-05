@@ -70,7 +70,7 @@ body {
 }
 .wrap {
   writing-mode: vertical-rl;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 h1 {
@@ -184,7 +184,7 @@ a:hover {
   margin: 0 3rem;
 }
 .section p {
-  padding: 1rem 0 0 1rem;
+  padding: 0   0 0 1rem;
   /*   text-indent: 1em; */
 }
 .section .kobun-text p::first-letter {
