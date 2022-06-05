@@ -55,19 +55,22 @@ Global Styles
 Common
 ===============
 */
+html,
+body {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 
 body {
-  writing-mode: tb-rl;
-  direction: ltr;
-  overflow: scroll;
-  /*   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho ProN",
-    "Hiragino Mincho ProN W3", "Noto Serif JP", "游明朝", YuMincho, "HG明朝E",
-    "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif; */
   font-family: "Noto Serif JP", serif;
-  padding: 20px;
-  background: var(--clr-bcg);
-  backdrop-filter: var(--bdg-filter);
   color: var(--clr-font);
+
+  background: var(--clr -bcg);
+  backdrop-filter: var(--bdg-filter);
+}
+.wrap {
+  writing-mode: vertical-rl;
+  padding: 2rem;
 }
 
 h1 {
@@ -167,6 +170,10 @@ a:hover {
 }
 .nav .translate-text {
   padding-top: 2rem;
+}
+
+.container {
+  padding: 20px;
 }
 
 .section {
