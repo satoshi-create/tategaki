@@ -72,7 +72,7 @@ body {
   overflow: scroll; */
 }
 .wrap {
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   height: 98%;
   padding: 1rem;
 }
@@ -214,7 +214,8 @@ Parts
   display: none;
 }
 .translate-text {
-  /*    display:none; */
+  display: none;
+  /* transform: translate(-100px); */
   opacity: 0.6;
   max-width: 0;
   transition: var(--transition);
@@ -227,7 +228,8 @@ Parts
   display: none;
 }
 .show-text .translate-text {
-  /*     display:block; */
+  display: block;
+  /* transform: translate(100px); */
   opacity: 1;
   max-width: 100%;
 }

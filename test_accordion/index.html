@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test_accordion</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <style>
+      .section-center {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 70vw;
+        writing-mode: vertical-rl;
+      }
+      .question-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+      }
+
+      .question-title p {
+        margin-bottom: 0;
+        letter-spacing: var(--spacing);
+        color: var(--clr-grey-1);
+      }
+      .question-btn {
+        font-size: 1.5rem;
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        color: var(--clr-gold);
+        transition: var(--transition);
+      }
+      .question-btn:hover {
+        transform: rotate(90deg);
+      }
+      .question-text {
+        padding: 1rem 0 1.5rem 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        height: 300px;
+      }
+      .question-text p {
+        margin-bottom: 0;
+      }
+      /* hide text */
+      .question-text {
+        display: none;
+      }
+      .show-text .question-text {
+        display: block;
+      }
+      .minus-icon {
+        display: none;
+      }
+      .show-text .minus-icon {
+        display: inline;
+      }
+      .show-text .plus-icon {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section-center">
+      <div class="question-title">
+        <p>do you accept all major credit cards?</p>
+        <button type="button" class="question-btn">
+          <span class="plus-icon">
+            <i class="far fa-plus-square"></i>
+          </span>
+          <span class="minus-icon">
+            <i class="far fa-minus-square"></i>
+          </span>
+        </button>
+      </div>
+      <!-- question text -->
+      <div class="question-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore
+          illo dolores quia nemo doloribus quaerat, magni numquam repellat
+          reprehenderit.
+        </p>
+      </div>
+    </div>
+    <!-- javascript -->
+    <script>
+      const section = document.querySelector(".section-center");
+      const btn = document.querySelector(".question-btn");
+      // console.log(btn);
+
+      btn.addEventListener("click", function () {
+        // console.log(question);
+        section.classList.toggle("show-text");
+      });
+    </script>
+  </body>
+</html>
