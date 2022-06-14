@@ -99,12 +99,12 @@ sections.forEach(function (section) {
   const btn = section.querySelector(".translate-btn.section-btn");
 
   btn.addEventListener("click", function () {
-    section.classList.add("red");
-    sections.forEach(function (item) {
-      if (item !== section) {
-        item.classList.remove("show-text");
-      }
-    });
+    // section.classList.add("red");
+    // sections.forEach(function (item) {
+    //   if (item !== section) {
+    //     item.classList.remove("show-text");
+    //   }
+    // });
     section.classList.toggle("show-text");
   });
 });

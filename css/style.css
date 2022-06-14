@@ -66,13 +66,10 @@ body {
   color: var(--clr-font);
   background: var(--clr -bcg);
   backdrop-filter: var(--bdg-filter);
-  /* writing-mode: tb-rl;
-  padding: 1rem;
-  direction: ltr;
-  overflow: scroll; */
+  /* writing-mode: vertical-rl; */
+  writing-mode: vertical-rl;
 }
 .wrap {
-  writing-mode: vertical-lr;
   height: 98%;
   padding: 1rem;
 }
