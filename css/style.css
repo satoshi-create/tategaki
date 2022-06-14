@@ -7,6 +7,11 @@
 Global Styles
 ===============
 */
+html,
+body {
+  overflow-x: visible;
+  overflow-y: hidden;
+}
 :root {
   font-size: 10px;
   --clr-black: #000;
@@ -55,22 +60,26 @@ Global Styles
 Common
 ===============
 */
-html,
-body {
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
 
 body {
   font-family: "Noto Serif JP", serif;
   color: var(--clr-font);
-
   background: var(--clr -bcg);
   backdrop-filter: var(--bdg-filter);
+  /* writing-mode: tb-rl;
+  padding: 1rem;
+  direction: ltr;
+  overflow: scroll; */
 }
 .wrap {
   writing-mode: vertical-rl;
+  height: 98%;
   padding: 1rem;
+}
+
+.section {
+  position: relative;
+  padding: 20px;
 }
 
 h1 {
@@ -172,19 +181,11 @@ a:hover {
   padding-top: 2rem;
 }
 
-.container {
-  padding: 20px;
-}
-
-.section {
-  /*   margin-left: 5rem; */
-  position: relative;
-}
 .section h3 {
   margin: 0 3rem;
 }
 .section p {
-  padding: 0   0 0 1rem;
+  padding: 0 0 0 1rem;
   /*   text-indent: 1em; */
 }
 .section .kobun-text p::first-letter {
