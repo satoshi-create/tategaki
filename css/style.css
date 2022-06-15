@@ -28,14 +28,13 @@ Global Styles
 }
 
 .gray-theme {
-  --clr-bcg: #ddd;
+  --clr-bcg: rgb(189, 189, 189);
   --clr-font: #020202;
   --clr-primary: #3c3c76;
   --clr-grey: #7e7ec1;
 }
 
 .dark-theme {
-  /*   --clr-bcg: #282c35; */
   --clr-font: #fff;
   --clr-primary: #b3b3f9;
   --clr-grey: #d8d7ff;
@@ -66,16 +65,15 @@ Common
 body {
   font-family: "Noto Serif JP", serif;
   color: var(--clr-font);
-  background: var(--clr -bcg);
+  background: var(--clr-bcg);
   backdrop-filter: var(--bdg-filter);
-  /* writing-mode: vertical-rl; */
   writing-mode: vertical-rl;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .section {
   position: relative;
-  padding: 20px;
+  padding: 2rem;
 }
 
 h1 {
@@ -110,17 +108,17 @@ a:hover {
   border-color: transparent;
   cursor: pointer;
 }
-.header {
+/* .header {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 80px auto;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 99;
   margin-left: 5rem;
-}
+} */
 
 .colors > .btn {
   width: 20px;
@@ -150,10 +148,10 @@ a:hover {
   transform: rotate(90deg);
 }
 .title {
-  margin-left: 5rem;
+  padding: 2rem;
 }
 
-.nav .nav-title {
+/* .nav .nav-title {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 6rem auto;
@@ -175,7 +173,7 @@ a:hover {
 }
 .nav .translate-text {
   padding-top: 2rem;
-}
+} */
 
 .section h3 {
   margin: 0 3rem;
@@ -303,4 +301,16 @@ Parts
   padding: 0;
   font-weight: normal;
   font-size: 1.8rem;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-btn);
+  transition: var(--transition);
+  cursor: pointer;
 }

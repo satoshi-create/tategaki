@@ -1,49 +1,50 @@
 import data from "../data/mokuji.js";
 const { mokuji, text } = data;
 
-const colors = document.querySelector(".colors");
+// const colors = document.querySelector(".colors");
 
-colors.addEventListener("click", function (e) {
-  const id = e.target.dataset.id;
+// colors.addEventListener("click", function (e) {
+//   const id = e.target.dataset.id;
 
-  const element = document.documentElement;
+//   const element = document.documentElement;
 
-  switch (id) {
-    case "white":
-      element.classList.remove(...element.classList);
-      document.documentElement.classList.add("white-theme");
-      break;
-    case "gray":
-      element.classList.remove(...element.classList);
-      document.documentElement.classList.add("gray-theme");
-      break;
-    case "black":
-      element.classList.remove(...element.classList);
-      document.documentElement.classList.add("dark-theme");
-      break;
-  }
-});
+//   switch (id) {
+//     case "white":
+//       element.classList.remove(...element.classList);
+//       document.documentElement.classList.add("white-theme");
+//       break;
+//     case "gray":
+//       element.classList.remove(...element.classList);
+//       document.documentElement.classList.add("gray-theme");
+//       break;
+//     case "black":
+//       element.classList.remove(...element.classList);
+//       document.documentElement.classList.add("dark-theme");
+//       break;
+//   }
+// });
 
-const mokujiText = document.querySelector(".translate-text");
+// const mokujiText = document.querySelector(".translate-text");
+
+// mokujiText.innerHTML = mokuji
+//   .map((item, index) => {
+//     return `
+// <li>
+//   <a href="#s${index}">
+//     <h3>${item}</h3>
+//   </a>
+// </li>
+// `;
+//   })
+//   .join("");
+
+// const navs = document.querySelector(".nav");
+// const navsBtn = navs.querySelector(".translate-btn.nav-btn");
+// navsBtn.addEventListener("click", function () {
+//   navs.classList.toggle("show-text");
+// });
+
 const container = document.querySelector(".container");
-
-mokujiText.innerHTML = mokuji
-  .map((item, index) => {
-    return `
-<li>
-  <a href="#s${index}">
-    <h3>${item}</h3>
-  </a>
-</li>
-`;
-  })
-  .join("");
-
-const navs = document.querySelector(".nav");
-const navsBtn = navs.querySelector(".translate-btn.nav-btn");
-navsBtn.addEventListener("click", function () {
-  navs.classList.toggle("show-text");
-});
 
 container.innerHTML = text
   .map((item, index) => {
@@ -109,31 +110,31 @@ sections.forEach(function (section) {
   });
 });
 
-const toggleTextBtn = document.querySelector(".toggle-text-btn");
-const kobunTextP = document.querySelectorAll(".kobun-text p");
-const translateTextP = document.querySelectorAll(
-  ".translate-text .gendaibun-text"
-);
-const toggleIcon = document.querySelector(".toggle-icon i");
+// const toggleTextBtn = document.querySelector(".toggle-text-btn");
+// const kobunTextP = document.querySelectorAll(".kobun-text p");
+// const translateTextP = document.querySelectorAll(
+//   ".translate-text .gendaibun-text"
+// );
+// const toggleIcon = document.querySelector(".toggle-icon i");
 
-toggleTextBtn.addEventListener("click", function () {
-  const result = container.classList.toggle("result");
-  toggleIcon.classList.toggle("rotate");
-  kobunTextP.forEach(function (kobun, i) {
-    if (result) {
-      kobun.innerHTML = `${text[i].gendaibun}`;
-    } else {
-      kobun.innerHTML = `${text[i].kobun}`;
-    }
-  });
-  translateTextP.forEach(function (translate, i) {
-    if (result) {
-      translate.innerHTML = `${text[i].kobun}`;
-    } else {
-      translate.innerHTML = `${text[i].gendaibun}`;
-    }
-  });
-});
+// toggleTextBtn.addEventListener("click", function () {
+//   const result = container.classList.toggle("result");
+//   toggleIcon.classList.toggle("rotate");
+//   kobunTextP.forEach(function (kobun, i) {
+//     if (result) {
+//       kobun.innerHTML = `${text[i].gendaibun}`;
+//     } else {
+//       kobun.innerHTML = `${text[i].kobun}`;
+//     }
+//   });
+//   translateTextP.forEach(function (translate, i) {
+//     if (result) {
+//       translate.innerHTML = `${text[i].kobun}`;
+//     } else {
+//       translate.innerHTML = `${text[i].gendaibun}`;
+//     }
+//   });
+// });
 
 // ---fetch mokuji.json---
 
