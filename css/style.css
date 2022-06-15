@@ -70,9 +70,12 @@ body {
   writing-mode: vertical-rl;
 }
 
+.container{
+  margin:4rem 0;
+}
+
 .section {
   position: relative;
-  margin-top: 4rem;
 }
 
 h1 {
@@ -278,7 +281,7 @@ Parts
 }
 
 .section .translate-text p {
-  padding: 1rem 2rem 0 2rem;
+  /* padding: 1rem 2rem 0 2rem; */
   /*   font-family: 'Kiwi Maru', serif; */
   font-weight: 200;
 }
@@ -326,7 +329,7 @@ Parts
 }
 
 .sidebar-open-btn,
-.sidebar-close-btn{
+.sidebar-close-btn {
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -359,9 +362,10 @@ Parts
 
 .sidebar h4 {
   color: var(--clr-black);
+  margin-bottom: 2rem;
 }
 .sidebar .mokuji {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--clr-black);
 }
 @media (min-width: 768px) {
