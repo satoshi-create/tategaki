@@ -25,28 +25,31 @@ mokujiLink.forEach(function (btn) {
   });
 });
 
-// const colors = document.querySelector(".colors");
+const colors = document.querySelector(".colors");
 
-// colors.addEventListener("click", function (e) {
-//   const id = e.target.dataset.id;
+colors.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
 
-//   const element = document.documentElement;
+  const element = document.documentElement;
 
-//   switch (id) {
-//     case "white":
-//       element.classList.remove(...element.classList);
-//       document.documentElement.classList.add("white-theme");
-//       break;
-//     case "gray":
-//       element.classList.remove(...element.classList);
-//       document.documentElement.classList.add("gray-theme");
-//       break;
-//     case "black":
-//       element.classList.remove(...element.classList);
-//       document.documentElement.classList.add("dark-theme");
-//       break;
-//   }
-// });
+  switch (id) {
+    case "white":
+      element.classList.remove(...element.classList);
+      document.documentElement.classList.add("white-theme");
+      sidebar.classList.remove("translate-sidebar");
+      break;
+    case "gray":
+      element.classList.remove(...element.classList);
+      document.documentElement.classList.add("gray-theme");
+      sidebar.classList.remove("translate-sidebar");
+      break;
+    case "black":
+      element.classList.remove(...element.classList);
+      document.documentElement.classList.add("dark-theme");
+      sidebar.classList.remove("translate-sidebar");
+      break;
+  }
+});
 
 // const mokujiText = document.querySelector(".translate-text");
 

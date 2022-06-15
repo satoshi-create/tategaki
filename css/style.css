@@ -38,7 +38,8 @@ Global Styles
   --clr-font: #fff;
   --clr-primary: #b3b3f9;
   --clr-grey: #d8d7ff;
-  --clr-bcg: url("https://images.unsplash.com/photo-1624043122202-a3784671aba0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  --clr-bcg:#000;
+  /* --clr-bcg: url("https://images.unsplash.com/photo-1624043122202-a3784671aba0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"); */
   --bdg-filter: blur(2px) brightness(0.1);
 }
 
@@ -66,12 +67,12 @@ body {
   font-family: "Noto Serif JP", serif;
   color: var(--clr-font);
   background: var(--clr-bcg);
-  backdrop-filter: var(--bdg-filter);
+  /* backdrop-filter: var(--bdg-filter); */
   writing-mode: vertical-rl;
 }
 
-.container{
-  margin:4rem 0;
+.container {
+  margin: 4rem 0;
 }
 
 .section {
@@ -144,6 +145,10 @@ a:hover {
   z-index: 99;
   margin-left: 5rem;
 } */
+
+.colors{
+  margin-bottom: 2rem;
+}
 
 .colors > .btn {
   width: 20px;

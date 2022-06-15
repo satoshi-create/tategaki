@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-  <html lang="ja">  
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" /> 
+  <link rel="stylesheet" href="css/style.css" />
   <title>方丈記 鴨長明 作</title>
 </head>
+
 <body>
 
-    <button class="sidebar-open-btn">
-      <i class="fa-solid fa-ellipsis-vertical"></i>
+  <button class="sidebar-open-btn">
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </button>
+  <aside class="sidebar">
+    <button class="sidebar-close-btn">
+      <i class="fa-solid fa-xmark"></i>
     </button>
-    <aside class="sidebar">
-      <button class="sidebar-close-btn">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <h4>方丈記</h4>
-      <span class="border"></span>
-      <ul class="mokuji">
-        <li>
-          <a href="#s0" class="mokuji-link">
-            ゆく河の流れ
-          </a>
-        </li>
-        <li>
-          <a href="#s1" class="mokuji-link">
-            安元の大火
-          </a>
-        </li>
-      </ul>
+    <div class="colors">
+      <button class="btn white" data-id="white"></button>
+      <button class="btn gray" data-id="gray"></button>
+      <button class="btn black" data-id="black"></button>
+    </div>
+    <h4>方丈記</h4>
+    <ul class="mokuji">
+      <li>
+        <a href="#s0" class="mokuji-link">
+          ゆく河の流れ
+        </a>
+      </li>
+      <li>
+        <a href="#s1" class="mokuji-link">
+          安元の大火
+        </a>
+      </li>
+    </ul>
 
-    </aside>
+  </aside>
   <div class="title">
     <h1>方丈記</h1>
     <h2>鴨長明 作</h2>
@@ -58,17 +63,14 @@
 
   <div class="container"></div>
 
-    </body>
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.3/jquery.mousewheel.min.js"></script>
-    </script>
-    <script type="module" src="js/script.js"></script>
-    <script src="js/jquery.js"></script>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.3/jquery.mousewheel.min.js"></script>
+</script>
+<script type="module" src="js/script.js"></script>
+<script src="js/jquery.js"></script>
 
-    <script
-    src="https://kit.fontawesome.com/a07a7ea817.js"
-    crossorigin="anonymous"
-    ></script>
+<script src="https://kit.fontawesome.com/a07a7ea817.js" crossorigin="anonymous"></script>
 
-    </html>
+</html>
