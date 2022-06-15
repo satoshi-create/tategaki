@@ -201,7 +201,7 @@ a:hover {
   margin: 0 3rem;
 }
 .section p {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 2rem;
   /*   text-indent: 1em; */
 }
 .section .kobun-text p::first-letter {
@@ -325,7 +325,8 @@ Parts
   font-size: 1.8rem;
 }
 
-.sidebar-toggle {
+.sidebar-open-btn,
+.sidebar-close-btn{
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -335,7 +336,6 @@ Parts
   color: var(--clr-btn);
   transition: var(--transition);
   cursor: pointer;
-  z-index: 100;
 }
 
 .sidebar {

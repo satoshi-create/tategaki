@@ -1,11 +1,28 @@
 import data from "../data/mokuji.js";
 const { mokuji, text } = data;
 
-const sidebarBtn = document.querySelector(".sidebar-toggle");
+const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
+const sidebarCloseBtn = document.querySelector(".sidebar-close-btn");
 const sidebar = document.querySelector(".sidebar");
+const container = document.querySelector(".container");
+const mokujiLink = document.querySelectorAll(".mokuji-link");
 
-sidebarBtn.addEventListener("click", function () {
-  sidebar.classList.toggle("translate-sidebar");
+sidebarOpenBtn.addEventListener("click", function () {
+  sidebar.classList.add("translate-sidebar");
+});
+
+sidebarCloseBtn.addEventListener("click", function () {
+  sidebar.classList.remove("translate-sidebar");
+});
+
+container.addEventListener("click", function () {
+  sidebar.classList.remove("translate-sidebar");
+});
+
+mokujiLink.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    sidebar.classList.remove("translate-sidebar");
+  });
 });
 
 // const colors = document.querySelector(".colors");
@@ -50,8 +67,6 @@ sidebarBtn.addEventListener("click", function () {
 // navsBtn.addEventListener("click", function () {
 //   navs.classList.toggle("show-text");
 // });
-
-const container = document.querySelector(".container");
 
 container.innerHTML = text
   .map((item, index) => {
