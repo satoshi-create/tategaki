@@ -68,12 +68,11 @@ body {
   background: var(--clr-bcg);
   backdrop-filter: var(--bdg-filter);
   writing-mode: vertical-rl;
-  padding: 2rem;
 }
 
 .section {
   position: relative;
-  padding: 2rem;
+  margin-top: 4rem;
 }
 
 h1 {
@@ -87,6 +86,10 @@ h2 {
 h3 {
   color: var(--clr-grey);
   font-size: 2.4rem;
+}
+h4 {
+  color: var(--clr-grey);
+  font-size: 2rem;
 }
 p {
   font-weight: 500;
@@ -148,7 +151,7 @@ a:hover {
   transform: rotate(90deg);
 }
 .title {
-  padding: 2rem;
+  margin-top: 4rem;
 }
 
 /* .nav .nav-title {
@@ -313,4 +316,24 @@ Parts
   color: var(--clr-btn);
   transition: var(--transition);
   cursor: pointer;
+  z-index: 100;
+}
+
+.sidebar {
+  width: 400px;
+  height: 100%;
+  background: antiquewhite;
+  /* transform: translate(100%); */
+  display: none;
+  writing-mode: horizontal-tb;
+  padding: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.translate-sidebar.sidebar {
+  /* transform: translate(0); */
+  display: block;
 }

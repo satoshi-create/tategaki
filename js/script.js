@@ -1,6 +1,13 @@
 import data from "../data/mokuji.js";
 const { mokuji, text } = data;
 
+const sidebarBtn = document.querySelector(".sidebar-toggle");
+const sidebar = document.querySelector(".sidebar");
+
+sidebarBtn.addEventListener("click", function () {
+  sidebar.classList.toggle("translate-sidebar");
+});
+
 // const colors = document.querySelector(".colors");
 
 // colors.addEventListener("click", function (e) {
