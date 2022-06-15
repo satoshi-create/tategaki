@@ -97,7 +97,7 @@ p {
   line-height: 2;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 3.6rem;
   }
@@ -108,7 +108,7 @@ p {
     font-size: 2.4rem;
   }
   h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   p {
     font-size: 2rem;
@@ -352,12 +352,6 @@ Parts
   z-index: 99;
 }
 
-@media (min-width: 800px) {
-  .sidebar {
-    width: 400px;
-  }
-}
-
 .translate-sidebar.sidebar {
   /* transform: translate(0); */
   display: block;
@@ -369,4 +363,13 @@ Parts
 .sidebar .mokuji {
   font-size: 1.6rem;
   color: var(--clr-black);
+}
+@media (min-width: 768px) {
+  .sidebar {
+    width: 400px;
+  }
+  .sidebar .mokuji {
+    font-size: 2rem;
+    color: var(--clr-black);
+  }
 }
