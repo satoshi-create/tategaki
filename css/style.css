@@ -18,6 +18,7 @@ Global Styles
   --clr-btn: #d6d6d6;
   --clr-btn-02: #b3b3b3;
   --clr-sidebar: #7e7ec1;
+  --clr-word: #ed0f0f;
   --transition: all 0.3s linear;
 }
 
@@ -29,6 +30,7 @@ Global Styles
   --clr-sidebar: #7e7ec1;
   --clr-btn: #d6d6d6;
   --clr-btn-02: #b3b3b3;
+  --clr-word: #ed0f0f;
 }
 
 /* .gray-theme {
@@ -48,6 +50,7 @@ Global Styles
   --bdg-filter: blur(2px) brightness(0.1);
   --clr-btn: #636363;
   --clr-btn-02: #adadad;
+  --clr-word: #ed0f0f;
 }
 
 *,
@@ -365,9 +368,6 @@ Parts
 
 .sidebar-open-btn,
 .sidebar-close-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
@@ -375,27 +375,49 @@ Parts
   transition: var(--transition);
   cursor: pointer;
 }
-
+.sidebar-open-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+.sidebarR .sidebar-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 .sidebar {
   width: 40%;
   height: 100%;
-  background: var(--clr-sidebar);
-  /* transform: translate(100%); */
   display: none;
   writing-mode: horizontal-tb;
   padding: 2rem;
   position: absolute;
   top: 0;
-  right: 0;
   z-index: 99;
 }
-
+.sidebarR {
+  right: 0;
+  background: var(--clr-sidebar);
+}
+.sidebarL {
+  left: 0;
+  background: var(--clr-btn);
+  text-align: right;
+}
+.sidebar-word-box{
+  text-align: left;
+}
+.sidebarL .sidebar-close-btn {
+  color: #fff;
+}
+.sidebarL h4 {
+  color: var(--clr-black);
+}
 .translate-sidebar.sidebar {
-  /* transform: translate(0); */
   display: block;
 }
 
-.sidebar h4 {
+.sidebarR h4 {
   color: var(--clr-bcg);
   margin-bottom: 2rem;
 }
@@ -415,4 +437,13 @@ Parts
     font-size: 2rem;
     color: var(--clr-black);
   }
+}
+
+.word {
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--clr-word);
+}
+.word:hover {
+  opacity: 0.6;
 }
