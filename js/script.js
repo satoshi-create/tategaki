@@ -5,7 +5,6 @@ const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
 const sidebarCloseBtn = document.querySelector(".sidebar-close-btn");
 const sidebar = document.querySelector(".sidebar");
 const container = document.querySelector(".container");
-const mokujiLink = document.querySelectorAll(".mokuji-link");
 
 sidebarOpenBtn.addEventListener("click", function () {
   sidebar.classList.add("translate-sidebar");
@@ -17,12 +16,6 @@ sidebarCloseBtn.addEventListener("click", function () {
 
 container.addEventListener("click", function () {
   sidebar.classList.remove("translate-sidebar");
-});
-
-mokujiLink.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    sidebar.classList.remove("translate-sidebar");
-  });
 });
 
 const colors = document.querySelector(".colors");
@@ -51,19 +44,27 @@ colors.addEventListener("click", function (e) {
   }
 });
 
-// const mokujiText = document.querySelector(".translate-text");
+const mokujiText = document.querySelector(".mokuji");
 
-// mokujiText.innerHTML = mokuji
-//   .map((item, index) => {
-//     return `
-// <li>
-//   <a href="#s${index}">
-//     <h3>${item}</h3>
-//   </a>
-// </li>
-// `;
-//   })
-//   .join("");
+mokujiText.innerHTML = mokuji
+  .map((item, index) => {
+    return `
+<li>
+  <a href="#s${index}" class="mokuji-link">
+    ${item}
+  </a>
+</li>
+`;
+  })
+  .join("");
+
+const mokujiLink = document.querySelectorAll(".mokuji-link");
+
+mokujiLink.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    sidebar.classList.remove("translate-sidebar");
+  });
+});
 
 // const navs = document.querySelector(".nav");
 // const navsBtn = navs.querySelector(".translate-btn.nav-btn");
@@ -146,11 +147,15 @@ const toggleIcon = document.querySelector(".toggle-icon i");
 toggleTextBtn.addEventListener("click", function () {
   const result = container.classList.toggle("result");
   toggleIcon.classList.toggle("rotate");
-  console.log(toggleTextP);
+  sections.forEach(function (section) {
+    if (section.classList.contains("show-text")) {
+      section.classList.remove("show-text");
+    }
+  });
   toggleTextP.forEach(function (item) {
     if (item.classList.contains("active-color")) {
       item.classList.remove("active-color");
-    }else{
+    } else {
       item.classList.add("active-color");
     }
   });
