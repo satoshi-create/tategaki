@@ -135,31 +135,40 @@ sections.forEach(function (section) {
   });
 });
 
-// const toggleTextBtn = document.querySelector(".toggle-text-btn");
-// const kobunTextP = document.querySelectorAll(".kobun-text p");
-// const translateTextP = document.querySelectorAll(
-//   ".translate-text .gendaibun-text"
-// );
-// const toggleIcon = document.querySelector(".toggle-icon i");
+const toggleTextBtn = document.querySelector(".toggle-text-btn");
+const kobunTextP = document.querySelectorAll(".kobun-text p");
+const toggleTextP = document.querySelectorAll(".toggle-text p");
+const translateTextP = document.querySelectorAll(
+  ".translate-text .gendaibun-text"
+);
+const toggleIcon = document.querySelector(".toggle-icon i");
 
-// toggleTextBtn.addEventListener("click", function () {
-//   const result = container.classList.toggle("result");
-//   toggleIcon.classList.toggle("rotate");
-//   kobunTextP.forEach(function (kobun, i) {
-//     if (result) {
-//       kobun.innerHTML = `${text[i].gendaibun}`;
-//     } else {
-//       kobun.innerHTML = `${text[i].kobun}`;
-//     }
-//   });
-//   translateTextP.forEach(function (translate, i) {
-//     if (result) {
-//       translate.innerHTML = `${text[i].kobun}`;
-//     } else {
-//       translate.innerHTML = `${text[i].gendaibun}`;
-//     }
-//   });
-// });
+toggleTextBtn.addEventListener("click", function () {
+  const result = container.classList.toggle("result");
+  toggleIcon.classList.toggle("rotate");
+  console.log(toggleTextP);
+  toggleTextP.forEach(function (item) {
+    if (item.classList.contains("active-color")) {
+      item.classList.remove("active-color");
+    }else{
+      item.classList.add("active-color");
+    }
+  });
+  kobunTextP.forEach(function (kobun, i) {
+    if (result) {
+      kobun.innerHTML = `${text[i].gendaibun}`;
+    } else {
+      kobun.innerHTML = `${text[i].kobun}`;
+    }
+  });
+  translateTextP.forEach(function (translate, i) {
+    if (result) {
+      translate.innerHTML = `${text[i].kobun}`;
+    } else {
+      translate.innerHTML = `${text[i].gendaibun}`;
+    }
+  });
+});
 
 // ---fetch mokuji.json---
 
