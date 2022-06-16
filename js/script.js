@@ -38,11 +38,11 @@ colors.addEventListener("click", function (e) {
       document.documentElement.classList.add("white-theme");
       sidebar.classList.remove("translate-sidebar");
       break;
-    case "gray":
-      element.classList.remove(...element.classList);
-      document.documentElement.classList.add("gray-theme");
-      sidebar.classList.remove("translate-sidebar");
-      break;
+    // case "gray":
+    //   element.classList.remove(...element.classList);
+    //   document.documentElement.classList.add("gray-theme");
+    //   sidebar.classList.remove("translate-sidebar");
+    //   break;
     case "black":
       element.classList.remove(...element.classList);
       document.documentElement.classList.add("dark-theme");

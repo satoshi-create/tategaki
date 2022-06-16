@@ -13,34 +13,39 @@ Global Styles
   --clr-black: #000;
   --clr-bcg: #fff;
   --clr-font: #020202;
-  --clr-primary: #e500be;
-  --clr-grey: #eb00c3;
-  --clr-btn: #b7b7b7;
+  --clr-primary: #6d6db7;
+  --clr-primary-02: #7e7ec1;
+  --clr-btn: #d6d6d6;
+  --clr-btn-02: #b3b3b3;
+  --clr-sidebar: #7e7ec1;
   --transition: all 0.3s linear;
 }
 
 .white-theme {
   --clr-bcg: #fff;
   --clr-font: #020202;
-  --clr-primary: #e500be;
-  --clr-grey: #eb00c3;
-  --clr-btn: #b7b7b7;
+  --clr-primary: #6d6db7;
+  --clr-primary-02: #7e7ec1;
+  --clr-sidebar: #7e7ec1;
+  --clr-btn: #d6d6d6;
 }
 
-.gray-theme {
+/* .gray-theme {
   --clr-bcg: rgb(189, 189, 189);
   --clr-font: #020202;
   --clr-primary: #3c3c76;
   --clr-grey: #7e7ec1;
-}
+} */
 
 .dark-theme {
   --clr-font: #fff;
   --clr-primary: #b3b3f9;
-  --clr-grey: #d8d7ff;
+  --clr-primary-02: #d8d7ff;
+  --clr-sidebar: #fff;
   --clr-bcg: #000;
   /* --clr-bcg: url("https://images.unsplash.com/photo-1624043122202-a3784671aba0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"); */
   --bdg-filter: blur(2px) brightness(0.1);
+  --clr-btn: #d6d6d6;
 }
 
 *,
@@ -88,11 +93,11 @@ h2 {
   font-size: 2.4rem;
 }
 h3 {
-  color: var(--clr-grey);
+  color: var(--clr-primary-02);
   font-size: 2rem;
 }
 h4 {
-  color: var(--clr-grey);
+  color: var(--clr-primary-02);
   font-size: 1.8rem;
 }
 p {
@@ -124,6 +129,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:hover {
   opacity: 0.6;
@@ -176,7 +182,7 @@ a:hover {
   right: 3rem;
   font-size: 2rem;
   background: transparent;
-  border-color: transparent;
+  border-color: transpare nt;
   color: var(--clr-btn);
   transition: var(--transition);
   cursor: pointer;
@@ -184,7 +190,7 @@ a:hover {
   display: flex;
 }
 .toggle-text .active-color {
-  color: var(--clr-black);
+  color: var(--clr-btn-02);
 }
 .toggle-text-btn {
   color: var(--clr-btn);
@@ -371,7 +377,7 @@ Parts
 .sidebar {
   width: 40%;
   height: 100%;
-  background: antiquewhite;
+  background: var(--clr-sidebar);
   /* transform: translate(100%); */
   display: none;
   writing-mode: horizontal-tb;
@@ -388,12 +394,16 @@ Parts
 }
 
 .sidebar h4 {
-  color: var(--clr-black);
+  color: var(--clr-bcg);
   margin-bottom: 2rem;
 }
-.sidebar .mokuji {
+
+.sidebar .mokuji li {
   font-size: 1.8rem;
-  color: var(--clr-black);
+  color: var(--clr-bcg);
+}
+.sidebar .mokuji li a {
+  transition: var(--transition);
 }
 @media (min-width: 768px) {
   .sidebar {
