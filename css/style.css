@@ -28,6 +28,7 @@ Global Styles
   --clr-primary-02: #7e7ec1;
   --clr-sidebar: #7e7ec1;
   --clr-btn: #d6d6d6;
+  --clr-btn-02: #b3b3b3;
 }
 
 /* .gray-theme {
@@ -45,7 +46,8 @@ Global Styles
   --clr-bcg: #000;
   /* --clr-bcg: url("https://images.unsplash.com/photo-1624043122202-a3784671aba0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"); */
   --bdg-filter: blur(2px) brightness(0.1);
-  --clr-btn: #d6d6d6;
+  --clr-btn: #636363;
+  --clr-btn-02: #adadad;
 }
 
 *,
