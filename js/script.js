@@ -1,5 +1,5 @@
 import data from "../data/mokuji.js";
-const { mokuji, text } = data;
+const { mokuji, phrase, text } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
 const sidebarCloseBtn = document.querySelector(".sidebarR .sidebar-close-btn");
@@ -96,26 +96,7 @@ container.innerHTML = text
     </div>
   </div>
   <div class="translate-text">
-    <p class="gendaibun-text">${gendaibun}</p>
-    
-     ${
-       phrase
-         ? `<ul class="phrase-text">
-    ${phrase
-      .map((item, index) => {
-        return `
-                  <li>
-          <h4>【${item.phrasekobun}】</h4>
-          <p>${item.transphrase}</p>
-         </li>
-    `;
-      })
-      .join("")}
-    
-    </ul>`
-         : ""
-     }
-    
+    <p class="gendaibun-text">${gendaibun}</p>   
      </div>
 </section>
 `;
@@ -176,13 +157,33 @@ toggleTextBtn.addEventListener("click", function () {
   });
 });
 
-const word = document.querySelector(".word");
+const sidebarWordBox = document.querySelector(".sidebar-word-box");
+
+// sidebarWordBox.innerHTML = phrase
+//   .map((item, index) => {
+//     const { phrasekobun, transphrase } = item;
+//     return `
+//     <h4>${phrasekobun}</h4>
+//     <p>${transphrase}</p>
+// `;
+//   })
+//   .join("");
+
 const wordSidebar = document.querySelector(".sidebarL");
 const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
+const containerAll = document.querySelectorAll(".container");
 
-word.addEventListener("click", function () {
-  wordSidebar.classList.toggle("translate-sidebar");
-  console.log(wordSidebar.classList.contains("translate-sidebar"));
+containerAll.forEach(function (item) {
+  const word = item.querySelectorAll(".word");
+  console.log(word);
+
+  word.forEach(function (item, i) {
+    item.addEventListener("click", function () {
+      wordSidebar.classList.toggle("translate-sidebar");
+      const { phrasekobun, transphrase } = phrase[i];
+      sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
+    });
+  });
 });
 
 sidebarLCloseBtn.addEventListener("click", function () {
