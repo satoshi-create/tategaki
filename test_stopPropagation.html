@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #js-alert-2 {
+        background: #ccc;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="js-alert-2">
+      <button id="js-child-2">子要素</button>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(function () {
+      $("#js-alert-2").click(function () {
+        alert("親要素がクリックされたよ！");
+      });
+      $("#js-child-2").click(function (event) {
+        event.stopPropagation();
+        alert("子要素がクリックされたよ！");
+      });
+    });
+  </script>
+</html>

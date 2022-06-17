@@ -16,6 +16,7 @@ $(window).load(function () {
     $(this).scrollLeft($(this).scrollLeft() - mov * speed);
     //webkit
     $("body").scrollLeft($("body").scrollLeft() - mov * speed);
-    return false; //縦スクロール不可
+    //return false(縦スクロール付加)にするとUnable to preventDefault...というエラーがでたため、処理を書き換え
+    return true;
   });
 });

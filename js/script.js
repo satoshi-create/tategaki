@@ -3,21 +3,21 @@ const { mokuji, phrase, text } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
 const sidebarCloseBtn = document.querySelector(".sidebarR .sidebar-close-btn");
-const sidebar = document.querySelector(".sidebarR");
+const sidebarR = document.querySelector(".sidebarR");
 const container = document.querySelector(".container");
 
 sidebarOpenBtn.addEventListener("click", function () {
-  sidebar.classList.add("translate-sidebar");
+  sidebarR.classList.add("translate-sidebar");
 });
 
 sidebarCloseBtn.addEventListener("click", function () {
-  sidebar.classList.remove("translate-sidebar");
+  sidebarR.classList.remove("translate-sidebar");
   wordSidebar.classList.remove("translate-sidebar");
 });
 
-container.addEventListener("click", function () {
-  sidebar.classList.remove("translate-sidebar");
-});
+// container.addEventListener("click", function () {
+//   sidebarR.classList.remove("translate-sidebar");
+// });
 
 const colors = document.querySelector(".colors");
 
@@ -30,7 +30,7 @@ colors.addEventListener("click", function (e) {
     case "white":
       element.classList.remove(...element.classList);
       document.documentElement.classList.add("white-theme");
-      sidebar.classList.remove("translate-sidebar");
+      sidebarR.classList.remove("translate-sidebar");
       break;
     // case "gray":
     //   element.classList.remove(...element.classList);
@@ -40,7 +40,7 @@ colors.addEventListener("click", function (e) {
     case "black":
       element.classList.remove(...element.classList);
       document.documentElement.classList.add("dark-theme");
-      sidebar.classList.remove("translate-sidebar");
+      sidebarR.classList.remove("translate-sidebar");
       break;
   }
 });
@@ -63,7 +63,7 @@ const mokujiLink = document.querySelectorAll(".mokuji-link");
 
 mokujiLink.forEach(function (btn) {
   btn.addEventListener("click", function () {
-    sidebar.classList.remove("translate-sidebar");
+    sidebarR.classList.remove("translate-sidebar");
   });
 });
 
@@ -159,33 +159,29 @@ toggleTextBtn.addEventListener("click", function () {
 
 const sidebarWordBox = document.querySelector(".sidebar-word-box");
 
-// sidebarWordBox.innerHTML = phrase
-//   .map((item, index) => {
-//     const { phrasekobun, transphrase } = item;
-//     return `
-//     <h4>${phrasekobun}</h4>
-//     <p>${transphrase}</p>
-// `;
-//   })
-//   .join("");
-
-const wordSidebar = document.querySelector(".sidebarL");
+const sidebarL = document.querySelector(".sidebarL");
 const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
 const containerAll = document.querySelectorAll(".container");
 
 containerAll.forEach(function (item) {
   const word = item.querySelectorAll(".word");
-  console.log(word);
-
+  console.log(item.querySelectorAll("section:not(.word"));
   word.forEach(function (item, i) {
-    item.addEventListener("click", function () {
-      wordSidebar.classList.toggle("translate-sidebar");
+    item.addEventListener("click", function (e) {
+      // イベント伝播を停止
+      e.stopPropagation();
+      sidebarL.classList.toggle("translate-sidebar");
       const { phrasekobun, transphrase } = phrase[i];
       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
     });
   });
 });
 
+container.addEventListener("click", function () {
+  sidebarR.classList.remove("translate-sidebar");
+  sidebarL.classList.remove("translate-sidebar");
+});
+
 sidebarLCloseBtn.addEventListener("click", function () {
-  wordSidebar.classList.remove("translate-sidebar");
+  sidebarL.classList.remove("translate-sidebar");
 });

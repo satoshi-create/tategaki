@@ -386,21 +386,23 @@ Parts
   right: 1rem;
 }
 .sidebar {
-  width: 40%;
-  height: 100%;
   display: none;
   writing-mode: horizontal-tb;
   padding: 2rem;
   position: absolute;
-  top: 0;
   z-index: 99;
 }
 .sidebarR {
   right: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
   background: var(--clr-sidebar);
 }
 .sidebarL {
-  left: 0;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
   background: var(--clr-btn);
   text-align: right;
 }
@@ -437,6 +439,13 @@ Parts
     font-size: 2rem;
     color: var(--clr-black);
   }
+  .sidebarL {
+    left: 0;
+    top: 0%;
+    height: 100%;
+    background: var(--clr-btn);
+    text-align: right;
+  }
 }
 
 .word {
@@ -447,3 +456,7 @@ Parts
 .word:hover {
   opacity: 0.6;
 }
+
+/* .container:not(.word){
+  color: blue;
+} */
