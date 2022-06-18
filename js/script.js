@@ -5,9 +5,11 @@ const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
 const sidebarCloseBtn = document.querySelector(".sidebarR .sidebar-close-btn");
 const sidebarR = document.querySelector(".sidebarR");
 const container = document.querySelector(".container");
+const sidebarL = document.querySelector(".sidebarL");
 
 sidebarOpenBtn.addEventListener("click", function () {
   sidebarR.classList.add("translate-sidebar");
+  sidebarL.classList.remove("translate-sidebar");
 });
 
 sidebarCloseBtn.addEventListener("click", function () {
@@ -124,7 +126,6 @@ const toggleTextP = document.querySelectorAll(".toggle-text p");
 const translateTextP = document.querySelectorAll(".gendaibun-text");
 const toggleIcon = document.querySelector(".toggle-icon i");
 
-const sidebarL = document.querySelector(".sidebarL");
 const sidebarWordBox = document.querySelector(".sidebar-word-box");
 
 toggleTextBtn.addEventListener("click", function () {
@@ -137,6 +138,8 @@ toggleTextBtn.addEventListener("click", function () {
       section.classList.remove("show-text");
     }
   });
+
+  sidebarL.classList.remove("translate-sidebar");
 
   toggleTextP.forEach(function (item) {
     if (item.classList.contains("active-color")) {
@@ -204,6 +207,7 @@ containerAll.forEach(function (item) {
       // イベント伝播を停止
       e.stopPropagation();
       sidebarL.classList.toggle("translate-sidebar");
+      sidebarR.classList.remove("translate-sidebar"); 
       const { phrasekobun, transphrase } = phrase[i];
       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
     });
