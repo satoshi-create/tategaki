@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript">
+      var now = new Date();
+      function LoadProc() {
+        var target = document.getElementById("DateTimeDisp");
+
+        var Year = now.getFullYear();
+        var Month = now.getMonth();
+        var Date = now.getDate();
+        var Hour = now.getHours();
+        var Min = now.getMinutes();
+        var Sec = now.getSeconds();
+
+        target.innerHTML =
+          Year +
+          "年" +
+          Month +
+          "月" +
+          Date +
+          "日" +
+          Hour +
+          ":" +
+          Min +
+          ":" +
+          Sec;
+        console.log(target.innerHTML);
+      }
+
+      function Button_Click() {
+        window.location.reload();
+      }
+    </script>
+  </head>
+  <body onload="LoadProc();">
+    現在の時刻:
+    <div id="DateTimeDisp"></div>
+    <hr />
+    <div>
+      <button onclick="Button_Click();">reload</button>
+    </div>
+  </body>
+</html>

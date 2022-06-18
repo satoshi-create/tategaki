@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script type="text/javascript">
+      window.onload = function () {
+        kakidashi();
+      };
+      function setText1(data) {
+        document.getElementById("test1").innerHTML = data;
+        kakidashi();
+      }
+      // function kakidashi(data) {
+      //   const basyo = document.getElementById("kakidashi");
+      //   return function(){
+      //     basyo.innerHTML += value;
+      //   }
+      // }
+
+      function kakidasi() {
+        (function (newfunc) {
+          var save = document.write;
+          document.write = newfunc;
+          document.write.reset = function () {
+            document.write = save;
+          };
+        })(
+          (function () {
+            basyo = document.getElementById("kakidashi");
+            return function (value) {
+              basyo.innerHTML += value;
+            };
+          })()
+        );
+        document.write(document.getElementById("test1").innerHTML + "<br>");
+        document.write.reset();
+      }
+      
+    </script>
+  </head>
+  <body>
+    <body>
+      <div id="test1">始め</div>
+      <br />
+      <a href="#" onClick="setText1('セットテスト1')">1</a>
+      <div id="kakidashi"></div>
+    </body>
+  </body>
+</html>

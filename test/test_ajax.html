@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hogehoge {
+        display: table;
+        width: 100%;
+        background: #fff;
+      }
+      .hoge {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+      #nav {
+        list-style: none;
+      }
+
+      #nav li {
+        width: 140px;
+        text-align: center;
+        background-color: #333;
+        display: inline-block;
+      }
+
+      #nav li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hogehoge">
+      <article class="hoge">
+        <a href="https://example.com">
+          <picture
+            ><img src="https://yutori-shine.com/files/uploads/sample.jpg"
+          /></picture>
+          <h3>初期サンプル１</h3>
+        </a>
+      </article>
+      <article class="hoge">
+        <a href="https://example.com">
+          <picture
+            ><img src="https://yutori-shine.com/files/uploads/sample.jpg"
+          /></picture>
+          <h3>初期サンプル２</h3>
+        </a>
+      </article>
+    </div>
+    <ul class="hoge-link" id="nav">
+      <li><a href="javascript:void(0)" data-id="20">1</a></li>
+      <li><a href="javascript:void(0)" data-id="30">2</a></li>
+      <li><a href="javascript:void(0)" data-id="40">3</a></li>
+    </ul>
+  </body>
+  <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script>
+    window.onload = function () {
+      $(".hoge-link a").on("click", function () {
+        var tag_id = $(this).data("id");
+
+        if (isNaN(tag_id)) {
+          return false;
+        }
+        var api_url =
+          "https://www.googleapis.com/books/v1/volumes?q=阿刀田高&maxResults=2&startIndex=" +
+          tag_id;
+
+        $.ajax({
+          url: api_url,
+          dataType: "json",
+          success: function (data) {
+            array = data.items;
+            $(".hogehoge").html("");
+            $.each(array, function (i) {
+              var thumurl = array[i].volumeInfo.imageLinks.thumbnail;
+              var sslthumurl = thumurl.replace("http", "https");
+              var htmltext = "";
+              htmltext = htmltext + '<article class="hoge">';
+              htmltext =
+                htmltext +
+                '<a href="' +
+                array[i].saleInfo.buyLink +
+                '" target="_blank">';
+              htmltext = htmltext + "<picture>";
+              htmltext = htmltext + '<img src="' + sslthumurl + '" alt="">';
+              htmltext = htmltext + "</picture>";
+              htmltext =
+                htmltext + "<h3>" + array[i].volumeInfo.title + "</span></h3>";
+              $(".hogehoge").append(htmltext);
+              const hogehoge = document.querySelector(".hogehoge");
+              console.log(hogehoge);
+            });
+          },
+        });
+      });
+    };
+  </script>
+</html>

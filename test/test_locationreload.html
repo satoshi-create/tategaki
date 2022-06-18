@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample</title>
+</head>
+<body>
+  ただ今の時刻は<span id="dt"></span>です。
+  <input type="button" onclick="location.reload();" value="リロード" />
+  <script>
+    const dt = document.getElementById("dt");
+    // 現在時刻を表示
+    const now = new Date();
+    dt.innerHTML = now.toLocaleTimeString();
+    console.log(dt);
+  </script>
+</body>
+</html>

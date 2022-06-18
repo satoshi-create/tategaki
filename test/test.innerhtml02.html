@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="screen">
+      <button onclick="BackToFunc()">画面を元に戻す</button>
+      <button onclick="DefaultFunc()">画面を変える</button>
+      <p id="demo"></p>
+    </div>
+    <script>
+      const demo = document.getElementById("demo");
+      demo.innerHTML = "最初の画面";
+      var defaultHTML = document.getElementById("screen").innerHTML;
+      console.log(demo);
+
+      function BackToFunc() {
+        document.body.innerHTML = defaultHTML;
+      }
+      function DefaultFunc() {
+        document.getElementById("demo").innerHTML = "画面を変える";
+      }
+      window.onload = function () {
+        BackToFunc();
+      };
+    </script>
+  </body>
+</html>

@@ -121,19 +121,23 @@ sections.forEach(function (section) {
 const toggleTextBtn = document.querySelector(".toggle-text-btn");
 const kobunTextP = document.querySelectorAll(".kobun-text p");
 const toggleTextP = document.querySelectorAll(".toggle-text p");
-const translateTextP = document.querySelectorAll(
-  ".translate-text .gendaibun-text"
-);
+const translateTextP = document.querySelectorAll(".gendaibun-text");
 const toggleIcon = document.querySelector(".toggle-icon i");
+
+const sidebarL = document.querySelector(".sidebarL");
+const sidebarWordBox = document.querySelector(".sidebar-word-box");
 
 toggleTextBtn.addEventListener("click", function () {
   const result = container.classList.toggle("result");
+
   toggleIcon.classList.toggle("rotate");
+
   sections.forEach(function (section) {
     if (section.classList.contains("show-text")) {
       section.classList.remove("show-text");
     }
   });
+
   toggleTextP.forEach(function (item) {
     if (item.classList.contains("active-color")) {
       item.classList.remove("active-color");
@@ -144,22 +148,51 @@ toggleTextBtn.addEventListener("click", function () {
   kobunTextP.forEach(function (kobun, i) {
     if (result) {
       kobun.innerHTML = `${text[i].gendaibun}`;
+      wordLink(kobun);
     } else {
       kobun.innerHTML = `${text[i].kobun}`;
+      wordLink(kobun);
     }
   });
   translateTextP.forEach(function (translate, i) {
     if (result) {
       translate.innerHTML = `${text[i].kobun}`;
+      wordLink(translate);
     } else {
       translate.innerHTML = `${text[i].gendaibun}`;
+      wordLink(translate);
     }
   });
 });
 
-const sidebarWordBox = document.querySelector(".sidebar-word-box");
+function wordLink(text) {
+  const word = text.querySelectorAll(".word");
+  word.forEach(function (item, i) {
+    item.addEventListener("click", function (e) {
+      // イベント伝播を停止
+      e.stopPropagation();
+      sidebarL.classList.toggle("translate-sidebar");
+      const { phrasekobun, transphrase } = phrase[i];
+      sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
+    });
+  });
+}
+// const sidebarL = document.querySelector(".sidebarL");
+// const sidebarWordBox = document.querySelector(".sidebar-word-box");
 
-const sidebarL = document.querySelector(".sidebarL");
+// translateTextP.forEach(function (translate, i) {
+//   const word = translate.querySelectorAll(".word");
+//   console.log(word);
+//   word.forEach(function (item, i) {
+//     item.addEventListener("click", function (e) {
+//       console.log("word");
+//     });
+//   });
+// });
+
+// const sidebarWordBox = document.querySelector(".sidebar-word-box");
+
+// const sidebarL = document.querySelector(".sidebarL");
 const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
 const containerAll = document.querySelectorAll(".container");
 
