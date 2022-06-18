@@ -252,7 +252,7 @@ a:hover {
   /*   text-indent: 1em; */
 }
 .section .kobun-text p::first-letter {
-  font-size: 110%;
+  /* font-size: 110%; */
   font-weight: bold;
 }
 /*
@@ -260,17 +260,17 @@ a:hover {
 Parts
 ===============
 */
-
+/* 
 .gion {
   padding: 2rem;
   font-weight: 1000;
-}
-.indent {
+} */
+/* .indent {
   letter-spacing: -0.06rem;
 }
 .indent02 {
   letter-spacing: -0.18rem;
-}
+} */
 
 /* translate */
 .minus-icon {
@@ -337,10 +337,6 @@ Parts
   bottom: 0;
   left: 1em;
 }
-.red {
-  red: red;
-}
-
 .loader {
   writing-mode: lr-tb;
   font-size: 3.6rem;
