@@ -151,31 +151,31 @@ toggleTextBtn.addEventListener("click", function () {
   kobunTextP.forEach(function (kobun, i) {
     if (result) {
       kobun.innerHTML = `${text[i].gendaibun}`;
-      wordLink(kobun);
     } else {
       kobun.innerHTML = `${text[i].kobun}`;
-      wordLink(kobun);
+      wordLink(kobun, i);
     }
   });
   translateTextP.forEach(function (translate, i) {
     if (result) {
       translate.innerHTML = `${text[i].kobun}`;
-      wordLink(translate);
+      wordLink(translate, i);
     } else {
       translate.innerHTML = `${text[i].gendaibun}`;
-      wordLink(translate);
     }
   });
 });
 
-function wordLink(text) {
-  const word = text.querySelectorAll(".word");
+function wordLink(data, i) {
+  const phrases = phrase[i];
+  const word = data.querySelectorAll(".word");
   word.forEach(function (item, i) {
     item.addEventListener("click", function (e) {
       // イベント伝播を停止
       e.stopPropagation();
       sidebarL.classList.toggle("translate-sidebar");
-      const { phrasekobun, transphrase } = phrase[i];
+      console.log(phrases);
+      const { phrasekobun, transphrase } = phrases[i];
       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
     });
   });
@@ -192,33 +192,44 @@ function wordLink(text) {
 //     });
 //   });
 // });
-
-// const sidebarWordBox = document.querySelector(".sidebar-word-box");
-
-// const sidebarL = document.querySelector(".sidebarL");
-const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
-const containerAll = document.querySelectorAll(".container");
-
-containerAll.forEach(function (item) {
+console.log(kobunTextP[0]);
+kobunTextP.forEach(function (item, i) {
+  const phrases = phrase[i];
   const word = item.querySelectorAll(".word");
-  console.log(item.querySelectorAll("section:not(.word"));
   word.forEach(function (item, i) {
     item.addEventListener("click", function (e) {
       // イベント伝播を停止
       e.stopPropagation();
       sidebarL.classList.toggle("translate-sidebar");
-      sidebarR.classList.remove("translate-sidebar"); 
-      const { phrasekobun, transphrase } = phrase[i];
+      sidebarR.classList.remove("translate-sidebar");
+      const { phrasekobun, transphrase } = phrases[i];
       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
     });
   });
 });
+
+// const containerAll = document.querySelectorAll(".container");
+// containerAll.forEach(function (item) {
+//   const word = item.querySelectorAll(".word");
+//   // console.log(item.querySelectorAll("section:not(.word"));
+//   word.forEach(function (item, i) {
+//     item.addEventListener("click", function (e) {
+//       // イベント伝播を停止
+//       e.stopPropagation();
+//       sidebarL.classList.toggle("translate-sidebar");
+//       sidebarR.classList.remove("translate-sidebar");
+//       const { phrasekobun, transphrase } = text[i];
+//       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
+//     });
+//   });
+// });
 
 container.addEventListener("click", function () {
   sidebarR.classList.remove("translate-sidebar");
   sidebarL.classList.remove("translate-sidebar");
 });
 
+const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
 sidebarLCloseBtn.addEventListener("click", function () {
   sidebarL.classList.remove("translate-sidebar");
 });

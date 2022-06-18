@@ -1,26 +1,38 @@
 const data = {
   mokuji: ["ゆく河の流れ", "安元の大火"],
   phrase: [
-    {
-      phrasekobun: "【うたかた】",
-      transphrase: "水面の泡",
-    },
-    {
-      phrasekobun: "【甍（いらか）】",
-      transphrase: "屋根瓦（やねがわら）",
-    },
+    [
+      {
+        phrasekobun: "【うたかた】",
+        transphrase: "水面の泡",
+      },
+      {
+        phrasekobun: "【かつ...）】",
+        transphrase: "一方では",
+      },
+    ],
+    [
+      {
+        phrasekobun: "【玉敷き】",
+        transphrase: "たましき",
+      },
+      {
+        phrasekobun: "【甍（いらか）】",
+        transphrase: "屋根の瓦",
+      },
+    ],
   ],
   text: [
     {
       title: "<h3 id=s0>ゆく河の流れ</h3>",
       kobun:
-        "行く川のながれは絶えずして、<br>しかも本の水にあらず。<br>よどみに浮ぶ<span class='word'>うたかた</span>は、<br>かつ消えかつ結びて久しくとどまることなし。",
+        "行く川のながれは絶えずして、<br>しかも本の水にあらず。<br>よどみに浮ぶ<span class='word'>うたかた</span>は、<br><span class='word'>かつ</span>消えかつ結びて久しくとどまることなし。",
       gendaibun:
         "河の流れは常に絶える事がなく、しかも流れ行く河の水は移り変って絶間がない。奔流に現われる<ruby><rb>飛沫</rb><rp>（</rp><rt>ひまつ</rt><rp>）</rp></ruby>は一瞬も止る事がなく、現れるや<ruby><rb>直</rb><rp>（</rp><rt>すぐ</rt><rp>）</rp></ruby>に消えてしまって又新しく現れるのである。",
     },
     {
       kobun:
-        "世の中にある人とすみかと、<br>またかくの如し。<br><ruby><rb>玉敷</rb><rp>（</rp><rt>たまし</rt><rp>）</rp></ruby>きの都の中にむねをならべ<span class='word'><ruby><rb>甍</rb><rp>（</rp><rt>いらか</rt><rp>）</rp></ruby></span>をあらそへる、<br>高き卑しき人のすまひは、<br><ruby><rb>代々</rb><rp>（</rp><rt>よよ</rt><rp>）</rp></ruby>を経て尽きせぬものなれど、<br>これをまことかと尋ぬれば、<br>昔ありし家はまれなり。<br>あるいはこぞ焼けてことしは造り、<br>あるいは<ruby><rb>大家</rb><rp>（</rp><rt>おおいえ</rt><rp>）</rp></ruby>ほろびて<ruby><rb>小家</rb><rp>（</rp><rt>こいえ</rt><rp>）</rp></ruby>となる。",
+        "世の中にある人とすみかと、<br>またかくの如し。<br><span class='word'><ruby><rb>玉敷</rb><rp>（</rp><rt>たまし</rt><rp>）</rp></ruby>き</span>の都の中にむねをならべ<span class='word'><ruby><rb>甍</rb><rp>（</rp><rt>いらか</rt><rp>）</rp></ruby></span>をあらそへる、<br>高き卑しき人のすまひは、<br><ruby><rb>代々</rb><rp>（</rp><rt>よよ</rt><rp>）</rp></ruby>を経て尽きせぬものなれど、<br>これをまことかと尋ぬれば、<br>昔ありし家はまれなり。<br>あるいはこぞ焼けてことしは造り、<br>あるいは<ruby><rb>大家</rb><rp>（</rp><rt>おおいえ</rt><rp>）</rp></ruby>ほろびて<ruby><rb>小家</rb><rp>（</rp><rt>こいえ</rt><rp>）</rp></ruby>となる。",
       gendaibun:
         "世の中の人々の運命や、人々の<ruby><rb>住家</rb><rp>（</rp><rt>すみか</rt><rp>）</rp></ruby>の移り変りの激しい事等は丁度河の流れにも<ruby><rb>譬</rb><rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えられ、又奔流に現われては消えさる飛沫の様に極めてはかないものである。壮麗を極めた花の都の中にぎっしりと立ち並んでいる家々は各々の美しく高い<ruby><rb>甍</rb><rp>（</rp><rt>いらか</rt><rp>）</rp></ruby>をお互に競争し合っている。これ等の色々な人々の住家は<ruby><rb>何時</rb><rp>（</rp><rt>いつ</rt><rp>）</rp></ruby>の時代にでもあるもので決して絶えるものではないのであるが、さてこういう貴賤様々な人々の住家の<ruby><rb>中</rb><rp>（</rp><rt>うち</rt><rp>）</rp></ruby>に不変のものを見出すと云う事は出来るものではなく、昔の<ruby><rb>儘</rb><rp>（</rp><rt>まま</rt><rp>）</rp></ruby>に現在までも続いていると云う住家は<ruby><rb>殆</rb><rp>（</rp><rt>ほとん</rt><rp>）</rp></ruby>んどなく、極めて<ruby><rb>稀</rb><rp>（</rp><rt>まれ</rt><rp>）</rp></ruby>に昔の美しさのある物を発見するのが<ruby><rb>頗</rb><rp>（</rp><rt>すこぶ</rt><rp>）</rp></ruby>る難しいことなのである。この辺に美しい立派な住家があったのだがと見て見るともうその家は去年焼け失せて無くなっていたりする。又こんな所にこんな立派な住家は無かったのにと思って見ると前の貧しい家は焼け失せて現在はこれほどの立派な住家になっていたりするものである。この様に昔お金持であって立派な美しい住家に住んでいた人が今は見る陰もなく落ちぶれて昔の住家に比ぶれば掘立小屋同様の住家に住んでいたりする。こんな運命が人々の歩まねばならないものなのである。",
     },
