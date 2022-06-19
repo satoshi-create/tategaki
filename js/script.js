@@ -1,5 +1,6 @@
-import data from "../data/mokuji.js";
-const { mokuji, phrase, text } = data;
+import data from "../data/houjyouki.js";
+// import data from "../data/tsureduregusa.js";
+const { titleName, author, text } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
 const sidebarCloseBtn = document.querySelector(".sidebarR .sidebar-close-btn");
@@ -47,14 +48,22 @@ colors.addEventListener("click", function (e) {
   }
 });
 
+const title = document.querySelector(".title");
+
+title.innerHTML = `
+<h1>${titleName}</h1>
+<h2>${author} 作</h2>
+`;
+
 const mokujiText = document.querySelector(".mokuji");
 
-mokujiText.innerHTML = mokuji
+mokujiText.innerHTML = text
   .map((item, index) => {
+    const { title } = item;
     return `
 <li>
   <a href="#s${index}" class="mokuji-link">
-    ${item}
+    ${title ? title : ""}
   </a>
 </li>
 `;
@@ -77,11 +86,13 @@ mokujiLink.forEach(function (btn) {
 
 container.innerHTML = text
   .map((item, index) => {
-    const { kobun, gendaibun, title, phrase } = item;
+    const { kobun, gendaibun, title } = item;
     return `  
 <section class="section section${index + 1}">
   <div class="kobun-text">
+  <h3 id="s${index}">
     ${title ? title : ""}
+    </h3>
     <p>
       ${kobun}
     </p>
@@ -167,8 +178,7 @@ toggleTextBtn.addEventListener("click", function () {
 });
 
 function wordLink(data, i) {
-  const phrases = phrase[i];
-  console.log(phrases);
+  const phrases = text[i].phrase;
   const word = data.querySelectorAll(".word");
   word.forEach(function (item, i) {
     item.addEventListener("click", function (e) {
@@ -195,7 +205,7 @@ function wordLink(data, i) {
 //   });
 // });
 kobunTextP.forEach(function (item, i) {
-  const phrases = phrase[i];
+  const phrases = text[i].phrase;
   const word = item.querySelectorAll(".word");
   word.forEach(function (item, i) {
     item.addEventListener("click", function (e) {
@@ -204,7 +214,6 @@ kobunTextP.forEach(function (item, i) {
       sidebarL.classList.toggle("translate-sidebar");
       sidebarR.classList.remove("translate-sidebar");
       const { phrasekobun, transphrase, className, supplementary } = phrases[i];
-      console.log(className);
       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p><p class=${
         className ? className : ""
       }>${supplementary ? supplementary : ""}</p>`;

@@ -100,7 +100,7 @@ h2 {
 h3 {
   color: var(--clr-primary);
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   /* display: inline-block;
   background: linear-gradient(90deg, #4158d0, #c850c0 30%, #ffcc70);
   background: -webkit-linear-gradient(309deg, #4158d0, #c850c0 30%, #ffcc70);
@@ -427,13 +427,17 @@ Parts
   margin-bottom: 2rem;
 }
 
-.sidebar .mokuji li {
-  font-size: 1.8rem;
+/* .sidebar .mokuji li a {
   color: var(--clr-bcg);
 }
+.sidebar .mokuji li {
+  color: var(--clr-bcg);
+} */
 .sidebar .mokuji li a {
   transition: var(--transition);
+  color: var(--clr-bcg);
 }
+
 @media (min-width: 768px) {
   .sidebar {
     width: 400px;
