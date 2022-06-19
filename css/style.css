@@ -100,7 +100,7 @@ h2 {
 h3 {
   color: var(--clr-primary);
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   /* display: inline-block;
   background: linear-gradient(90deg, #4158d0, #c850c0 30%, #ffcc70);
   background: -webkit-linear-gradient(309deg, #4158d0, #c850c0 30%, #ffcc70);
@@ -459,7 +459,9 @@ Parts
 .word:hover {
   opacity: 0.6;
 }
-.waka{
-  writing-mode: vertical-rl;
-  margin: 50px auto;
+@media (min-width: 768px) {
+  .waka {
+    writing-mode: vertical-rl;
+    margin: 50px auto;
+  }
 }
