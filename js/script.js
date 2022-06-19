@@ -168,15 +168,17 @@ toggleTextBtn.addEventListener("click", function () {
 
 function wordLink(data, i) {
   const phrases = phrase[i];
+  console.log(phrases);
   const word = data.querySelectorAll(".word");
   word.forEach(function (item, i) {
     item.addEventListener("click", function (e) {
       // イベント伝播を停止
       e.stopPropagation();
       sidebarL.classList.toggle("translate-sidebar");
-      console.log(phrases);
-      const { phrasekobun, transphrase } = phrases[i];
-      sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
+      const { phrasekobun, transphrase, supplementary, className } = phrases[i];
+      sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p><p class=${
+        className ? className : ""
+      }>${supplementary ? supplementary : ""}</p>`;
     });
   });
 }
@@ -192,7 +194,6 @@ function wordLink(data, i) {
 //     });
 //   });
 // });
-console.log(kobunTextP[0]);
 kobunTextP.forEach(function (item, i) {
   const phrases = phrase[i];
   const word = item.querySelectorAll(".word");
@@ -202,8 +203,11 @@ kobunTextP.forEach(function (item, i) {
       e.stopPropagation();
       sidebarL.classList.toggle("translate-sidebar");
       sidebarR.classList.remove("translate-sidebar");
-      const { phrasekobun, transphrase } = phrases[i];
-      sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
+      const { phrasekobun, transphrase, className, supplementary } = phrases[i];
+      console.log(className);
+      sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p><p class=${
+        className ? className : ""
+      }>${supplementary ? supplementary : ""}</p>`;
     });
   });
 });
