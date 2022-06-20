@@ -1,6 +1,7 @@
 const data = {
   titleName: "徒然草",
   author: "吉田兼好",
+  textIndent: "textIndent",
   text: [
     {
       title: "序段 つれづれなるままに",

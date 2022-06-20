@@ -1,6 +1,7 @@
 const data = {
   titleName: "方丈記",
   author: "鴨長明",
+  sectionSpace:"sectionSpace",
   text: [
     {
       title: "ゆく河の流れ",

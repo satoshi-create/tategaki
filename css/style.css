@@ -247,9 +247,15 @@ a:hover {
 .section h3 {
   margin: 0 3rem;
 }
-.section .kobun-text p {
-  /* padding: 0 0 0 2rem; */
+/* .section .kobun-text p {
+  padding: 0 0 0 2rem;
   text-indent: 1em;
+} */
+.textIndent {
+  text-indent: 1em;
+}
+.sectionSpace {
+  margin-left: 2rem;
 }
 /* .section .kobun-text p::first-letter {
   font-size: 110%;

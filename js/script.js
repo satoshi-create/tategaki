@@ -1,6 +1,6 @@
 // import data from "../data/houjyouki.js";
 import data from "../data/tsureduregusa.js";
-const { titleName, author, text } = data;
+const { titleName, author, text, textIndent, sectionSpace } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
 const sidebarCloseBtn = document.querySelector(".sidebarR .sidebar-close-btn");
@@ -98,11 +98,10 @@ container.innerHTML = text
   .map((item, index) => {
     const { kobun, gendaibun, title } = item;
     return `  
-<section class="section section${index + 1}">
+<section class="section section${index + 1} ${sectionSpace}">
 ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
   <div class="kobun-text">
-
-    <p>
+    <p class=${textIndent ? textIndent : ""}>
       ${kobun}
     </p>
     <div class="translate">
