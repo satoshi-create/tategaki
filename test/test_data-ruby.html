@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  p{
+    writing-mode: vertical-rl;
+    text-align: left;
+  }
+  [data-ruby] {
+    position: relative;
+  }
+
+  [data-ruby]::before {
+    content: attr(data-ruby);
+    position: absolute;
+    top: -1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0.5em;
+  }
+</style>
+
+<body>
+  <!-- <p>
+    <span data-ruby="わがはい">
+      吾輩 </span>は猫である
+
+  </p> -->
+  <p>ゆく<span data-ruby="かわ">河</span>のながれは絶えずして、 <br>しかももとの水にあらず。 <br>よどみに<span data-ruby="う">浮</span>かぶ<span
+      class='word'>うたかた</span>は、 <br>かつ消えかつ結びて、久しくとどまりたるためしなし。</p>
+</body>
+
+</html>

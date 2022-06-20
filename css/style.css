@@ -14,11 +14,11 @@ Global Styles
   --clr-bcg: #fff;
   --clr-font: #020202;
   --clr-primary: #6d6db7;
-  --clr-primary-02: #434391;
+  --clr-primary-02: #7b7bd1;
+  --clr-accent: #e13a3a;
   --clr-btn: #d6d6d6;
   --clr-btn-02: #b3b3b3;
   --clr-sidebar: #7e7ec1;
-  --clr-word: #ed0f0f;
   --transition: all 0.3s linear;
 }
 
@@ -26,11 +26,11 @@ Global Styles
   --clr-bcg: #fff;
   --clr-font: #020202;
   --clr-primary: #6d6db7;
-  --clr-primary-02: #434391;
+  --clr-primary-02: #7b7bd1;
+  --clr-accent: #e13a3a;
   --clr-sidebar: #7e7ec1;
   --clr-btn: #d6d6d6;
   --clr-btn-02: #b3b3b3;
-  --clr-word: #ed0f0f;
 }
 
 /* .gray-theme {
@@ -43,14 +43,14 @@ Global Styles
 .dark-theme {
   --clr-font: #fff;
   --clr-primary: #d1d1ff;
-  --clr-primary-02: #a4a4ff;
+  --clr-primary-02: #e1e1ff;
+  --clr-accent: #ffbbbb;
   --clr-sidebar: #fff;
   --clr-bcg: #000;
   /* --clr-bcg: url("https://images.unsplash.com/photo-1624043122202-a3784671aba0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"); */
   --bdg-filter: blur(2px) brightness(0.1);
   --clr-btn: #636363;
   --clr-btn-02: #adadad;
-  --clr-word: #ed0f0f;
 }
 
 *,
@@ -90,15 +90,15 @@ body {
 }
 
 h1 {
-  color: var(--clr-primary-02);
+  color: var(--clr-primary);
   font-size: 3rem;
 }
 h2 {
-  color: var(--clr-primary-02);
+  color: var(--clr-primary);
   font-size: 2.4rem;
 }
 h3 {
-  color: var(--clr-primary);
+  color: var(--clr-primary-02);
   font-size: 2rem;
   font-weight: 500;
   /* display: inline-block;
@@ -424,7 +424,13 @@ Parts
 
 .sidebarR h4 {
   color: var(--clr-bcg);
+}
+.sidebarR .mokuji-title {
   margin-bottom: 2rem;
+}
+.sidebar .mokuji {
+  font-size: 2rem;
+  color: var(--clr-black);
 }
 
 /* .sidebar .mokuji li a {
@@ -442,10 +448,6 @@ Parts
   .sidebar {
     width: 400px;
   }
-  .sidebar .mokuji {
-    font-size: 2rem;
-    color: var(--clr-black);
-  }
   .sidebarL {
     left: 0;
     top: 0%;
@@ -460,9 +462,9 @@ Parts
   transition: var(--transition);
   color: var(--clr-primary);
 }
-.word:hover {
+/* .word:hover {
   opacity: 0.6;
-}
+} */
 @media (min-width: 768px) {
   .waka {
     writing-mode: vertical-rl;

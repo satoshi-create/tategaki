@@ -1,5 +1,5 @@
-import data from "../data/houjyouki.js";
-// import data from "../data/tsureduregusa.js";
+// import data from "../data/houjyouki.js";
+import data from "../data/tsureduregusa.js";
 const { titleName, author, text } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
@@ -57,18 +57,26 @@ title.innerHTML = `
 
 const mokujiText = document.querySelector(".mokuji");
 
-mokujiText.innerHTML = text
-  .map((item, index) => {
-    const { title } = item;
-    return `
-<li>
-  <a href="#s${index}" class="mokuji-link">
-    ${title ? title : ""}
-  </a>
-</li>
+mokujiText.innerHTML = `
+<div class="mokuji-title">
+    <h4>${titleName}</h4>
+    <h4>${author}</h4>
+    </div>
+    <ul>
+        ${text
+          .map((item, index) => {
+            const { title } = item;
+            return `
+          <li>
+            <a href="#s${index}" class="mokuji-link">
+              ${title ? title : ""}
+            </a>
+          </li>
+          `;
+          })
+          .join("")}
+    </ul>
 `;
-  })
-  .join("");
 
 const mokujiLink = document.querySelectorAll(".mokuji-link");
 

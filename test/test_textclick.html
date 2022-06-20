@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  ruby {
+    ruby-position: over;
+  }
+
+  .word {
+    cursor: pointer;
+    color: blue;
+    transition: all 0.3s linear;
+    backface-visibility: hidden;
+  }
+
+  .word:hover {
+    opacity: .6;
+    /* display: inline-block; */
+    backface-visibility: hidden;
+
+  }
+</style>
+
+<body>
+
+  <p>
+    世の中にある人と<ruby>
+      <rb>栖</rb>
+      <rp>（</rp>
+      <rt>すみか</rt>
+      <rp>）</rp>
+    </ruby>と、<br />又かくのごとし。<br /><span class='word'> <ruby>
+        <rb>玉敷</rb>
+        <rp>（</rp>
+        <rt>たまし</rt>
+        <rp>）</rp>
+      </ruby>き</span>の都のうちに、棟を並べ<span class='word'> <ruby>
+        <rb>甍</rb>
+        <rp>（</rp>
+        <rt>いらか</rt>
+        <rp>）</rp>
+      </ruby> </span>を争へる、<br />高き<ruby>
+      <rb>卑</rb>
+      <rp>（</rp>
+      <rt>いや</rt>
+      <rp>）</rp>
+    </ruby>しき人のすまひは、<br /><ruby>
+      <rb>世々</rb>
+      <rp>（</rp>
+      <rt>よよ</rt>
+      <rp>）</rp>
+    </ruby>を経て尽きせぬ物なれど、 <br />是をまことかと尋ぬれば、<br />昔しありし家はまれなり。 <br />或は<ruby>
+      <rb>去年</rb>
+      <rp>（</rp>
+      <rt>こぞ</rt>
+      <rp>）</rp>
+    </ruby>焼けて今年作れり。<br />或は<ruby>
+      <rb>大家</rb>
+      <rp>（</rp>
+      <rt>おおいえ</rt>
+      <rp>）</rp>
+    </ruby>ほろびて<ruby>
+      <rb>小家</rb>
+      <rp>（</rp>
+      <rt>こいえ</rt>
+      <rp>）</rp>
+    </ruby>となる。
+  </p>
+</body>
+<script>
+
+  // const word = document.querySelectorAll(".word")
+  // word.forEach(function (item) {
+  //   item.addEventListener("click", function () {
+  //     console.log("word");
+  //   })
+  // })
+
+</script>
+
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 1 標準的な書き方。ルビに対応していないブラウザに考慮した書き方 -->
+  <p>
+    <ruby>
+      明日 <rp>(</rp>
+      <rt>あした</rt>
+      <rp>)</rp>
+    </ruby>
+  </p>
+  <!-- 2 ルビに対応していないブラウザを無視した書き方 -->
+  <p>
+    <ruby>明日<rt>あした</rt></ruby>
+  </p>
+  <!-- 3 非推奨！！ -->
+  <p>
+    <ruby>
+      <!-- rb:IEが採用。標準化していない！！ -->
+      <rb>明日</rb>
+      <!-- rp:ルビ代替表示用括弧。ルビに対応していないブラウザ使用時、ルビの内容を（）で表示 -->
+      <rp>（</rp>
+      <!-- rt:HTML のルビ文字列 -->
+      <rt>明日</rt>
+      <rp>）</rp>
+    </ruby>
+  </p>
+
+  
+
+
+</body>
+
+</html>
