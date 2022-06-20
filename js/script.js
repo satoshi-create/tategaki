@@ -1,6 +1,6 @@
 // import data from "../data/houjyouki.js";
 // import data from "../data/tsureduregusa.js";
-import data from "../data/hyakuninissyu.js"
+import data from "../data/hyakuninissyu.js";
 const { titleName, author, text, textIndent, sectionSpace } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
@@ -68,11 +68,11 @@ mokujiText.innerHTML = `
     <ul>
         ${text
           .map((item, index) => {
-            const { title } = item;
+            const { mokujiTitle } = item;
             return `
           <li>
             <a href="#s${index}" class="mokuji-link">
-              ${title ? title : ""}
+              ${mokujiTitle}
             </a>
           </li>
           `;
