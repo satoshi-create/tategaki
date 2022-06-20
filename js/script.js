@@ -97,10 +97,9 @@ container.innerHTML = text
     const { kobun, gendaibun, title } = item;
     return `  
 <section class="section section${index + 1}">
+${title ? `<h3 id="s${index}">${title}</h3>` : ""}
   <div class="kobun-text">
-  <h3 id="s${index}">
-    ${title ? title : ""}
-    </h3>
+
     <p>
       ${kobun}
     </p>
