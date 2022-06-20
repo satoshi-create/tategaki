@@ -482,3 +482,15 @@ Parts
 .simonoku {
   margin-top: 8em;
 }
+
+.figure {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.figure img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  vertical-align: bottom;
+}

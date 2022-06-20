@@ -97,7 +97,7 @@ mokujiLink.forEach(function (btn) {
 
 container.innerHTML = text
   .map((item, index) => {
-    const { kobun, gendaibun, title } = item;
+    const { kobun, gendaibun, img, title } = item;
     return `  
 <section class="section section${index + 1} ${sectionSpace}">
 ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
@@ -118,8 +118,17 @@ ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
     </div>
   </div>
   <div class="translate-text">
-    <p class="gendaibun-text">${gendaibun}</p>   
-     </div>
+    <p class="gendaibun-text">${gendaibun}</p>
+    ${
+      img
+        ? `<figure class="figure">
+    <img src="./img/${img}">
+    </figure>`
+        : ""
+    }   
+    
+  </div>
+
 </section>
 `;
   })
