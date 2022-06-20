@@ -247,9 +247,9 @@ a:hover {
 .section h3 {
   margin: 0 3rem;
 }
-.section p {
+.section .kobun-text p {
   /* padding: 0 0 0 2rem; */
-  /* text-indent: 1em; */
+  text-indent: 1em;
 }
 /* .section .kobun-text p::first-letter {
   font-size: 110%;
@@ -328,6 +328,7 @@ Parts
   /* padding: 1rem 2rem 0 2rem; */
   /*   font-family: 'Kiwi Maru', serif; */
   font-weight: 200;
+  margin-left: 2rem;
 }
 .section .kobun-text {
   position: relative;

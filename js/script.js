@@ -48,6 +48,8 @@ colors.addEventListener("click", function (e) {
   }
 });
 
+document.title = `${titleName} ${author}作`;
+
 const title = document.querySelector(".title");
 
 title.innerHTML = `
