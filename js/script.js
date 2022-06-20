@@ -1,5 +1,6 @@
 // import data from "../data/houjyouki.js";
-import data from "../data/tsureduregusa.js";
+// import data from "../data/tsureduregusa.js";
+import data from "../data/hyakuninissyu.js"
 const { titleName, author, text, textIndent, sectionSpace } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
@@ -48,7 +49,7 @@ colors.addEventListener("click", function (e) {
   }
 });
 
-document.title = `${titleName} ${author}作`;
+document.title = `${titleName} ${author}`;
 
 const title = document.querySelector(".title");
 
