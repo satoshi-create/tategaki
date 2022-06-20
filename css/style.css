@@ -248,13 +248,13 @@ a:hover {
   margin: 0 3rem;
 }
 .section p {
-  padding: 0 0 0 2rem;
-  /*   text-indent: 1em; */
+  /* padding: 0 0 0 2rem; */
+  text-indent: 1em;
 }
-.section .kobun-text p::first-letter {
-  /* font-size: 110%; */
+/* .section .kobun-text p::first-letter {
+  font-size: 110%;
   font-weight: bold;
-}
+} */
 /*
 =============== 
 Parts
