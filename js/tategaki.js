@@ -92,7 +92,7 @@ title.innerHTML = `
 // get container
 container.innerHTML = text
   .map((item, index) => {
-    const { kobun, gendaibun, img, title } = item;
+    const { kobun, gendaibun, img, title, eibun } = item;
     return ` 
 <section class="section section${index + 1} ${sectionSpace}">
 ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
@@ -114,13 +114,22 @@ ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
   </div>
   <div class="translate-text">
     <p class="gendaibun-text">${gendaibun}</p>
+    <div class="figure">
     ${
       img
-        ? `<figure class="figure">
+        ? `
     <img src="./img/${img}">
-    </figure>`
+    `
         : ""
     }    
+    ${
+      eibun
+        ? `
+      <p>${eibun}</p>
+      `
+        : ""
+    }
+    </div>
   </div>
 </section>
 `;

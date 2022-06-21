@@ -229,7 +229,9 @@ const data = [
           "秋の田の　<span class='word'><ruby> 仮庵<rp>( <rt>かりほ <rp>)</ruby>の<ruby> 庵 <rp>( <rt>いほ <rp>)</ruby></span>の　<span class='word'><ruby> 苫 <rp>( <rt>とま <rp>)</ruby>をあらみ<br></span><span class='simonoku'>わが<ruby> 衣手 <rp>( <rt>ころもで <rp>)</ruby>は　露にぬれつつ</span>",
         gendaibun:
           "秋の田のほとりの仮の小屋は、ほんの間に合わせに荒く葺いた粗末なものだから、その小屋で番をしている私の袖は、ふけゆく夜露にしっとりと濡れつづけていることだ。",
-        // img: "Hyakuninisshu_001.jpg",
+        img: "Hyakuninisshu_001.jpg",
+        eibun:
+          "Because of the coarseness of the rush-mat<br>Of the temporary-hut<br>Where the rice of autumn harvest is<br>As far as my sleeve is concerned<br>They are becoming wet with dew (or tears).",
         phrase: [
           {
             phrasekobun: "【仮庵の庵】",

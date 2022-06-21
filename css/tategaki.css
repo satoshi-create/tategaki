@@ -244,14 +244,22 @@ Append Class
 
 .figure {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   padding: 2rem;
+  gap: 4rem;
 }
 .figure img {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
   object-fit: cover;
   vertical-align: bottom;
+  align-self: center;
+  transform: rotate(342deg);
+}
+.section .translate-text .figure p{
+  writing-mode: horizontal-tb;
+  margin-bottom: 2rem;
+  text-align: right;
 }
 .textIndent {
   text-indent: 1em;
