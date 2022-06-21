@@ -1,10 +1,10 @@
 const data = {
   titleName: "方丈記",
   author: "鴨長明",
-  sectionSpace:"sectionSpace",
+  sectionSpace: "sectionSpace",
   text: [
     {
-      title: "ゆく河の流れ",
+      title: "一 ゆく河の流れ",
       kobun:
         "ゆく河のながれは絶えずして、 <br>しかももとの水にあらず。 <br>よどみに浮ぶ<span class='word'>うたかた</span>は、 <br>かつ消えかつ結びて、久しくとどまりたるためしなし。",
       gendaibun:
@@ -61,7 +61,7 @@ const data = {
       ],
     },
     {
-      title: "安元の大火",
+      title: "二 安元の大火",
       kobun:
         "<ruby> <rb>予</rb> <rp>（</rp> <rt>われ</rt> <rp>）</rp></ruby>ものの心を知れりしより、<br><ruby> <rb>四十</rb> <rp>（</rp> <rt>よそぢ</rt> <rp>）</rp></ruby>余りの<ruby> <rb>春秋</rb> <rp>（</rp> <rt>はるあき</rt> <rp>）</rp></ruby>を送れる間に、<br>世の不思議を見る事、<br>やや度々になりぬ。",
       gendaibun:
@@ -140,7 +140,7 @@ const data = {
       ],
     },
     {
-      title: "治承の辻風",
+      title: "三 治承の辻風",
       kobun:
         "又<span class='word'> <ruby> <rb>治承</rb> <rp>（ <rt>ぢしょう <rp>） </ruby></span>四年卯月のころ、<br><span class='word'><ruby> <rb>中御門京極</rb> <rp>（ <rt>なかのみかどきやうごく <rp>） </ruby></span>のほどより、<br>大きなる<ruby> <rb>辻風</rb> <rp>（ <rt>つじかぜ <rp>）</ruby>おこりて、<br>六条わたりまで吹ける事侍りき。",
       gendaibun:
@@ -189,6 +189,18 @@ const data = {
         {
           phrasekobun: "【未（ひつじ）】",
           transphrase: "午（南）よりやや西の方角",
+        },
+      ],
+    },
+    {
+      kobun:
+        "辻風はつねに吹く物なれど、<br>かかる事やある。<br>ただ事にあらず、<br>さるべきものの<span class='word'>さとし</span>かなどぞうたがひ侍りし。",
+      gendaibun:
+        "春夏秋冬を通じて風が吹かない時は無いものであるが、何時もの風は風情のある心持の好い風であるのに今度の風はすさまじい風で、数多くの損害を人々に与えたのである。こんな風は何年かの間に一度とあるか無きかの風であって真に珍しい例外とも云うべきものである。今度の大惨事の事を深く考えて見るとこれはきっと天の神様が地上に住む人々に対して一つの警告として与えて下さったものだと考えざるを得ないのである。<br/>",
+      phrase: [
+        {
+          phrasekobun: "【さとし】",
+          transphrase: "神仏のお告げ。神託",
         },
       ],
     },

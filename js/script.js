@@ -1,6 +1,6 @@
 // import data from "../data/houjyouki.js";
-// import data from "../data/tsureduregusa.js";
-import data from "../data/hyakuninissyu.js";
+import data from "../data/tsureduregusa.js";
+// import data from "../data/hyakuninissyu.js";
 const { titleName, author, text, textIndent, sectionSpace } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");
@@ -55,7 +55,7 @@ const title = document.querySelector(".title");
 
 title.innerHTML = `
 <h1>${titleName}</h1>
-<h2>${author} 作</h2>
+<h2>${author}</h2>
 `;
 
 const mokujiText = document.querySelector(".mokuji");
@@ -68,11 +68,12 @@ mokujiText.innerHTML = `
     <ul>
         ${text
           .map((item, index) => {
-            const { mokujiTitle } = item;
+            const { mokujiTitle, title } = item;
             return `
           <li>
             <a href="#s${index}" class="mokuji-link">
-              ${mokujiTitle}
+              ${mokujiTitle ? mokujiTitle : ""}
+              ${title ? title : ""}
             </a>
           </li>
           `;
