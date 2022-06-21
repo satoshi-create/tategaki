@@ -8,28 +8,26 @@ const sidebarCloseBtn = document.querySelector(".sidebarR .sidebar-close-btn");
 const sidebarR = document.querySelector(".sidebarR");
 const container = document.querySelector(".container");
 const sidebarL = document.querySelector(".sidebarL");
+const colors = document.querySelector(".colors");
+const mokujiText = document.querySelector(".mokuji");
+const sidebarWordBox = document.querySelector(".sidebar-word-box");
 
+// get title
+document.title = `${titleName} ${author}`;
+
+// toggle sidebarR
 sidebarOpenBtn.addEventListener("click", function () {
   sidebarR.classList.add("translate-sidebar");
   sidebarL.classList.remove("translate-sidebar");
 });
-
 sidebarCloseBtn.addEventListener("click", function () {
   sidebarR.classList.remove("translate-sidebar");
-  wordSidebar.classList.remove("translate-sidebar");
 });
 
-// container.addEventListener("click", function () {
-//   sidebarR.classList.remove("translate-sidebar");
-// });
-
-const colors = document.querySelector(".colors");
-
+// toggle colors
 colors.addEventListener("click", function (e) {
   const id = e.target.dataset.id;
-
   const element = document.documentElement;
-
   switch (id) {
     case "white":
       element.classList.remove(...element.classList);
@@ -49,17 +47,7 @@ colors.addEventListener("click", function (e) {
   }
 });
 
-document.title = `${titleName} ${author}`;
-
-const title = document.querySelector(".title");
-
-title.innerHTML = `
-<h1>${titleName}</h1>
-<h2>${author}</h2>
-`;
-
-const mokujiText = document.querySelector(".mokuji");
-
+// get mokuji
 mokujiText.innerHTML = `
 <div class="mokuji-title">
     <h4>${titleName}</h4>
@@ -83,19 +71,21 @@ mokujiText.innerHTML = `
 `;
 
 const mokujiLink = document.querySelectorAll(".mokuji-link");
-
 mokujiLink.forEach(function (btn) {
   btn.addEventListener("click", function () {
     sidebarR.classList.remove("translate-sidebar");
   });
 });
 
-// const navs = document.querySelector(".nav");
-// const navsBtn = navs.querySelector(".translate-btn.nav-btn");
-// navsBtn.addEventListener("click", function () {
-//   navs.classList.toggle("show-text");
-// });
+// contents
+// get title
+const title = document.querySelector(".title");
+title.innerHTML = `
+<h1>${titleName}</h1>
+<h2>${author}</h2>
+`;
 
+// get container
 container.innerHTML = text
   .map((item, index) => {
     const { kobun, gendaibun, img, title } = item;
@@ -138,26 +128,17 @@ ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
 const sections = document.querySelectorAll(".section");
 sections.forEach(function (section) {
   const btn = section.querySelector(".translate-btn.section-btn");
-
   btn.addEventListener("click", function () {
-    // section.classList.add("red");
-    // sections.forEach(function (item) {
-    //   if (item !== section) {
-    //     item.classList.remove("show-text");
-    //   }
-    // });
     section.classList.toggle("show-text");
   });
 });
 
+// toggle-text
 const toggleTextBtn = document.querySelector(".toggle-text-btn");
 const kobunTextP = document.querySelectorAll(".kobun-text p");
 const toggleTextP = document.querySelectorAll(".toggle-text p");
 const translateTextP = document.querySelectorAll(".gendaibun-text");
 const toggleIcon = document.querySelector(".toggle-icon i");
-
-const sidebarWordBox = document.querySelector(".sidebar-word-box");
-
 toggleTextBtn.addEventListener("click", function () {
   const result = container.classList.toggle("result");
 
@@ -196,6 +177,7 @@ toggleTextBtn.addEventListener("click", function () {
   });
 });
 
+// toggle sidebarL
 function wordLink(data, i) {
   const phrases = text[i].phrase;
   const word = data.querySelectorAll(".word");
@@ -211,18 +193,6 @@ function wordLink(data, i) {
     });
   });
 }
-// const sidebarL = document.querySelector(".sidebarL");
-// const sidebarWordBox = document.querySelector(".sidebar-word-box");
-
-// translateTextP.forEach(function (translate, i) {
-//   const word = translate.querySelectorAll(".word");
-//   console.log(word);
-//   word.forEach(function (item, i) {
-//     item.addEventListener("click", function (e) {
-//       console.log("word");
-//     });
-//   });
-// });
 kobunTextP.forEach(function (item, i) {
   const phrases = text[i].phrase;
   const word = item.querySelectorAll(".word");
@@ -240,28 +210,14 @@ kobunTextP.forEach(function (item, i) {
   });
 });
 
-// const containerAll = document.querySelectorAll(".container");
-// containerAll.forEach(function (item) {
-//   const word = item.querySelectorAll(".word");
-//   // console.log(item.querySelectorAll("section:not(.word"));
-//   word.forEach(function (item, i) {
-//     item.addEventListener("click", function (e) {
-//       // イベント伝播を停止
-//       e.stopPropagation();
-//       sidebarL.classList.toggle("translate-sidebar");
-//       sidebarR.classList.remove("translate-sidebar");
-//       const { phrasekobun, transphrase } = text[i];
-//       sidebarWordBox.innerHTML = `<h4>${phrasekobun}</h4><p>${transphrase}</p>`;
-//     });
-//   });
-// });
+const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
+sidebarLCloseBtn.addEventListener("click", function () {
+  sidebarL.classList.remove("translate-sidebar");
+});
 
+// remove sidebar
 container.addEventListener("click", function () {
   sidebarR.classList.remove("translate-sidebar");
   sidebarL.classList.remove("translate-sidebar");
 });
 
-const sidebarLCloseBtn = document.querySelector(".sidebarL .sidebar-close-btn");
-sidebarLCloseBtn.addEventListener("click", function () {
-  sidebarL.classList.remove("translate-sidebar");
-});
