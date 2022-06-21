@@ -10,7 +10,7 @@ const container = document.querySelector(".container");
 const sidebarL = document.querySelector(".sidebarL");
 const colors = document.querySelector(".colors");
 const mokujiText = document.querySelector(".mokuji");
-const sidebarWordBox = document.querySelector(".sidebar-word-box");
+const sidebarWordBox = document.querySelector(".sidebarL-word-box");
 
 // get title
 document.title = `${titleName} ${author}`;
@@ -89,7 +89,7 @@ title.innerHTML = `
 container.innerHTML = text
   .map((item, index) => {
     const { kobun, gendaibun, img, title } = item;
-    return `  
+    return ` 
 <section class="section section${index + 1} ${sectionSpace}">
 ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
   <div class="kobun-text">
@@ -116,10 +116,8 @@ ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
     <img src="./img/${img}">
     </figure>`
         : ""
-    }   
-    
+    }    
   </div>
-
 </section>
 `;
   })
@@ -220,4 +218,3 @@ container.addEventListener("click", function () {
   sidebarR.classList.remove("translate-sidebar");
   sidebarL.classList.remove("translate-sidebar");
 });
-
