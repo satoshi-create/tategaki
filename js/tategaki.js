@@ -61,11 +61,10 @@ mokujiText.innerHTML = `
     <ul>
         ${text
           .map((item, index) => {
-            const { mokujiTitle, title } = item;
+            const { title } = item;
             return `
           <li>
             <a href="#s${index}" class="mokuji-link">
-              ${mokujiTitle ? mokujiTitle : ""}
               ${title ? title : ""}
             </a>
           </li>
@@ -222,4 +221,21 @@ sidebarLCloseBtn.addEventListener("click", function () {
 container.addEventListener("click", function () {
   sidebarR.classList.remove("translate-sidebar");
   sidebarL.classList.remove("translate-sidebar");
+});
+
+const openText = document.querySelector(".header .plus-icon");
+const closeText = document.querySelector(".header .minus-icon");
+
+openText.addEventListener("click", function () {
+  sections.forEach(function (section) {
+    section.classList.add("show-text");
+  });
+});
+
+closeText.addEventListener("click", function () {
+  sections.forEach(function (section) {
+    if (section.classList.contains("show-text")) {
+      section.classList.remove("show-text");
+    }
+  });
 });

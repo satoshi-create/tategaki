@@ -224,7 +224,6 @@ const data = [
     author: "定家 編",
     text: [
       {
-        mokujiTitle: "一番 秋の田の...",
         title: "一番　天智天皇",
         kobun:
           "秋の田の　<span class='word'><ruby> 仮庵<rp>( <rt>かりほ <rp>)</ruby>の<ruby> 庵 <rp>( <rt>いほ <rp>)</ruby></span>の　<span class='word'><ruby> 苫 <rp>( <rt>とま <rp>)</ruby>をあらみ<br></span><span class='simonoku'>わが<ruby> 衣手 <rp>( <rt>ころもで <rp>)</ruby>は　露にぬれつつ</span>",
@@ -245,7 +244,6 @@ const data = [
         ],
       },
       {
-        mokujiTitle: "二番 春すぎて...",
         title: "二番　持統天皇",
         kobun:
           "春すぎて　夏 <ruby> 来 <rp>(</rp> <rt>き</rt> <rp>)</rp></ruby>にけらし<span class='word'><ruby> 白妙 <rp>(</rp> <rt>しろたへ</rt> <rp>)</rp></ruby></span>の　<br><span class='simonoku'><ruby> 衣 <rp>(</rp> <rt>ころも</rt> <rp>)</rp></ruby><span class='word'>ほすてふ</span><span class='word'>あまのかぐやま</span>",
@@ -271,7 +269,6 @@ const data = [
         ],
       },
       {
-        mokujiTitle: "三番 あしびきの...",
         title: "三番　柿本人麻呂",
         kobun:
           "<span class='word'>あしびき</span>の　<span class='word'><ruby> 山鳥 <rp>(</rp> <rt>やまどり</rt> <rp>)</rp></ruby></span>の尾の　<span class='word'>しだり尾</span>の　<br><span class='simonoku'>長々し夜を　ひとりかも寝む</span>",

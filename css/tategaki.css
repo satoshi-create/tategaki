@@ -33,7 +33,7 @@ Colors
 Toggle text
 ===============
 */
-.toggle-text {
+.header {
   position: fixed;
   top: 0.5rem;
   right: 3rem;
@@ -42,6 +42,24 @@ Toggle text
   color: var(--clr-btn);
   transition: var(--transition);
   cursor: pointer;
+  writing-mode: horizontal-tb;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.header .plus-icon,
+.header .minus-icon {
+  font-size: 1.5rem;
+}
+.toggle-text {
+  /* position: fixed;
+  top: 0.5rem;
+  right: 3rem;
+  font-size: 2rem;
+  background: transparent;
+  color: var(--clr-btn);
+  transition: var(--transition);
+  cursor: pointer; */
   writing-mode: horizontal-tb;
   display: flex;
 }
