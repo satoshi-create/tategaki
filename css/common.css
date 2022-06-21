@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&display=swap");
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+:root {
+  font-size: 10px;
+  --clr-black: #000;
+  --clr-bcg: #fff;
+  --clr-font: #020202;
+  --clr-primary: #6d6db7;
+  --clr-primary-02: #7b7bd1;
+  --clr-accent: #e13a3a;
+  --clr-btn: #d6d6d6;
+  --clr-btn-02: #b3b3b3;
+  --clr-sidebar: #7e7ec1;
+  --transition: all 0.3s linear;
+}
+
+.white-theme {
+  --clr-bcg: #fff;
+  --clr-font: #020202;
+  --clr-primary: #6d6db7;
+  --clr-primary-02: #7b7bd1;
+  --clr-accent: #e13a3a;
+  --clr-sidebar: #7e7ec1;
+  --clr-btn: #d6d6d6;
+  --clr-btn-02: #b3b3b3;
+}
+
+/* .gray-theme {
+  --clr-bcg: rgb(189, 189, 189);
+  --clr-font: #020202;
+  --clr-primary: #3c3c76;
+  --clr-grey: #7e7ec1;
+} */
+
+.dark-theme {
+  --clr-font: #fff;
+  --clr-primary: #d1d1ff;
+  --clr-primary-02: #e1e1ff;
+  --clr-accent: #ffbbbb;
+  --clr-sidebar: #fff;
+  --clr-bcg: #000;
+  --bdg-filter: blur(2px) brightness(0.1);
+  --clr-btn: #636363;
+  --clr-btn-02: #adadad;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=============== 
+Common
+===============
+*/
+
+html,
+body {
+  overflow-x: visible;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Serif JP", serif;
+  color: var(--clr-font);
+  background: var(--clr-bcg);
+}
+h1 {
+  color: var(--clr-primary);
+  font-size: 3rem;
+}
+h2 {
+  color: var(--clr-primary);
+  font-size: 2.4rem;
+}
+h3 {
+  color: var(--clr-primary-02);
+  font-size: 2rem;
+  font-weight: 500;
+}
+h4 {
+  color: var(--clr-primary-02);
+  font-size: 1.8rem;
+}
+p {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: 0.6;
+}
+.btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
