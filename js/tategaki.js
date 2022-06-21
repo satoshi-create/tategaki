@@ -1,6 +1,11 @@
 // import data from "../data/houjyouki.js";
-import data from "../data/tsureduregusa.js";
-// import data from "../data/hyakuninissyu.js";
+// import data from "../data/tsureduregusa.js";
+import datas from "../data/data.js";
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const data = datas[id];
+console.log(datas[id]);
+
 const { titleName, author, text, textIndent, sectionSpace } = data;
 
 const sidebarOpenBtn = document.querySelector(".sidebar-open-btn");

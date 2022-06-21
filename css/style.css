@@ -80,15 +80,6 @@ body {
   background: var(--clr-bcg);
   writing-mode: vertical-rl;
 }
-
-.container {
-  margin: 4rem 0;
-}
-
-.section {
-  position: relative;
-}
-
 h1 {
   color: var(--clr-primary);
   font-size: 3rem;
@@ -212,6 +203,12 @@ Toggle text
 Contets
 ===============
 */
+.container {
+  margin: 4rem 0;
+}
+.section {
+  position: relative;
+}
 .title {
   margin-top: 4rem;
 }
