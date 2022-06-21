@@ -6,6 +6,7 @@ body {
 Colors
 ===============
 */
+
 .colors {
   margin-bottom: 2rem;
 }
@@ -95,12 +96,17 @@ Contets
 }
 .section h3 {
   margin: 0 3rem;
+  font-size: 2.5rem;
 }
 .section .minus-icon {
   display: none;
 }
 .section .kobun-text {
   position: relative;
+}
+.section .kobun-text p {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 2.5rem;
 }
 .section .translate {
   position: absolute;
@@ -120,8 +126,9 @@ Contets
   max-width: 100%;
 }
 .section .translate-text p {
-  font-weight: 200;
+  font-family: "Zen Kurenaido", sans-serif;
   margin: 0 2rem;
+  font-size: 2.2rem;
 }
 .section .translate-btn {
   color: var(--clr-btn);
@@ -228,7 +235,7 @@ Append Class
 .word {
   cursor: pointer;
   transition: var(--transition);
-  color: var(--clr-primary);
+  color: var(--clr-primary-02);
 }
 
 .simonoku {

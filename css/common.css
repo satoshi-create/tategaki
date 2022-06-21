@@ -2,18 +2,24 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
 /*
 =============== 
 Global Styles
 ===============
 */
-
 :root {
   font-size: 10px;
   --clr-black: #000;
   --clr-bcg: #fff;
   --clr-font: #020202;
-  --clr-primary: #6d6db7;
+  --clr-primary: #4a4f9f;
   --clr-primary-02: #7b7bd1;
   --clr-accent: #e13a3a;
   --clr-btn: #d6d6d6;
@@ -25,7 +31,7 @@ Global Styles
 .white-theme {
   --clr-bcg: #fff;
   --clr-font: #020202;
-  --clr-primary: #6d6db7;
+  --clr-primary: #4a4f9f;
   --clr-primary-02: #7b7bd1;
   --clr-accent: #e13a3a;
   --clr-sidebar: #7e7ec1;
@@ -42,8 +48,8 @@ Global Styles
 
 .dark-theme {
   --clr-font: #fff;
-  --clr-primary: #d1d1ff;
-  --clr-primary-02: #e1e1ff;
+  --clr-primary: #fff;
+  --clr-primary-02: #d1d1ff;
   --clr-accent: #ffbbbb;
   --clr-sidebar: #fff;
   --clr-bcg: #000;
@@ -78,19 +84,24 @@ body {
   font-family: "Noto Serif JP", serif;
   color: var(--clr-font);
   background: var(--clr-bcg);
+  background-image: url(../img/110310200304.png);
+  /* backdrop-filter: brightness(0.9); */
 }
 h1 {
   color: var(--clr-primary);
   font-size: 3rem;
+  font-family: "Kaisei Decol", serif;
 }
 h2 {
   color: var(--clr-primary);
   font-size: 2.4rem;
+  font-family: "Kaisei Decol", serif;
 }
 h3 {
-  color: var(--clr-primary-02);
+  color: var(--clr-primary);
   font-size: 2rem;
   font-weight: 500;
+  font-family: "Kaisei Decol", serif;
 }
 h4 {
   color: var(--clr-primary-02);

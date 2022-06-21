@@ -228,8 +228,8 @@ const data = [
         kobun:
           "秋の田の　<span class='word'><ruby> 仮庵<rp>( <rt>かりほ <rp>)</ruby>の<ruby> 庵 <rp>( <rt>いほ <rp>)</ruby></span>の　<span class='word'><ruby> 苫 <rp>( <rt>とま <rp>)</ruby>をあらみ<br></span><span class='simonoku'>わが<ruby> 衣手 <rp>( <rt>ころもで <rp>)</ruby>は　露にぬれつつ</span>",
         gendaibun:
-          "秋の田圃のほとりにある仮小屋の、屋根を葺いた苫の編み目が粗いので、私の衣の袖は露に濡れていくばかりだ。",
-        img: "Hyakuninisshu_001.jpg",
+          "秋の田のほとりの仮の小屋は、ほんの間に合わせに荒く葺いた粗末なものだから、その小屋で番をしている私の袖は、ふけゆく夜露にしっとりと濡れつづけていることだ。",
+        // img: "Hyakuninisshu_001.jpg",
         phrase: [
           {
             phrasekobun: "【仮庵の庵】",
@@ -248,13 +248,13 @@ const data = [
         kobun:
           "春すぎて　夏 <ruby> 来 <rp>(</rp> <rt>き</rt> <rp>)</rp></ruby>にけらし<span class='word'><ruby> 白妙 <rp>(</rp> <rt>しろたへ</rt> <rp>)</rp></ruby></span>の　<br><span class='simonoku'><ruby> 衣 <rp>(</rp> <rt>ころも</rt> <rp>)</rp></ruby><span class='word'>ほすてふ</span><span class='word'>あまのかぐやま</span>",
         gendaibun:
-          "いつの間にか、春が過ぎて夏がやってきたようですね。夏になると真っ白な衣を干すと言いますから、あの天の香具山に（あのように衣がひるがえっているのですから）。",
-        img: "Hyakuninisshu_002.jpg",
+          "いつしか春も過ぎてはや夏が来たらしい。卯花がまさかりで、いかにも白妙の衣を干しているともいうべきこの天の香具山を見ていると",
+        // img: "Hyakuninisshu_002.jpg",
         phrase: [
           {
             phrasekobun: "【白妙（しろたへ）】",
             transphrase:
-              "白妙は白い栲（たえ）の布。<br>栲はコウゾ類の木の皮の繊維で織った布で、純白で艶がある。",
+              "白妙は白い栲（たえ）の布。<br>栲はコウゾ類の木の皮の繊維で織った布で、純白で艶がある。<br>白妙の衣は卯花の比喩か",
           },
           {
             phrasekobun: "【ほすてふ】",
@@ -273,8 +273,8 @@ const data = [
         kobun:
           "<span class='word'>あしびき</span>の　<span class='word'><ruby> 山鳥 <rp>(</rp> <rt>やまどり</rt> <rp>)</rp></ruby></span>の尾の　<span class='word'>しだり尾</span>の　<br><span class='simonoku'>長々し夜を　ひとりかも寝む</span>",
         gendaibun:
-          "山鳥の尾の、長く長く垂れ下がった尾っぽのように長い夜を（想い人にも逢えないで）独りさびしく寝ることだろうか。",
-        img: "Hyakuninisshu_003.jpg",
+          "山鳥の尾の垂れさがった、あの長い長いその尾よりも、いっそう長いこの秋の夜を、恋しい人とも離れて、たったひとりでさびしく寝ることであろうかなあ。",
+        // img: "Hyakuninisshu_003.jpg",
         phrase: [
           {
             phrasekobun: "【足引きの（あしびきの）】",
@@ -293,12 +293,12 @@ const data = [
         ],
       },
       {
-        mokujiTitle: "四番 田子の浦に...",
-        title: "四番　山部赤人",
-        kobun: "田子の浦にうち出でてみれば白妙の富士の高嶺に雪は降りつつ",
+        title: "九十三番　山部赤人",
+        kobun:
+          "世の中は つねにもがもな なぎさこぐ <br><span class='simonoku'>あまの小舟の <ruby>綱手<rp>(</rp> <rt>つなで</rt> <rp>)</rp></ruby>かなしも</span>",
         gendaibun:
           "山鳥の尾の、長く長く垂れ下がった尾っぽのように長い夜を（想い人にも逢えないで）独りさびしく寝ることだろうか。",
-        img: "Hyakuninisshu_003.jpg",
+        // img: "Hyakuninisshu_003.jpg",
         phrase: [
           {
             phrasekobun: "【足引きの（あしびきの）】",
