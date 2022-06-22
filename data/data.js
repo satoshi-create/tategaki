@@ -229,9 +229,9 @@ const data = [
           "秋の田の　<span class='word'><ruby> 仮庵<rp>( <rt>かりほ <rp>)</ruby>の<ruby> 庵 <rp>( <rt>いほ <rp>)</ruby></span>の　<span class='word'><ruby> 苫 <rp>( <rt>とま <rp>)</ruby>をあらみ<br></span><span class='simonoku'>わが<ruby> 衣手 <rp>( <rt>ころもで <rp>)</ruby>は　露にぬれつつ</span>",
         gendaibun:
           "秋の田のほとりの仮の小屋は、ほんの間に合わせに荒く葺いた粗末なものだから、その小屋で番をしている私の袖は、ふけゆく夜露にしっとりと濡れつづけていることだ。",
-        img: "Hyakuninisshu_001.jpg",
-        eibun:
-          "Because of the coarseness of the rush-mat<br>Of the temporary-hut<br>Where the rice of autumn harvest is<br>As far as my sleeve is concerned<br>They are becoming wet with dew (or tears).",
+        // img: "Hyakuninisshu_001.jpg",
+        // eibun:
+        //   "Because of the coarseness of the rush-mat<br>Of the temporary-hut<br>Where the rice of autumn harvest is<br>As far as my sleeve is concerned<br>They are becoming wet with dew (or tears).",
         phrase: [
           {
             phrasekobun: "【仮庵の庵】",
@@ -408,6 +408,50 @@ const data = [
           "法師ばかり羨ましからぬものはあらじ。「人には木の<ruby><rb>端</rb> <rp>（</rp> <rt>はし</rt> <rp>）</rp></ruby>のやうに思はるるよ」と清少納言が書けるも、げにさることぞかし。いきほひまうに、ののしりたるにつけて、いみじとは見えず。<ruby><rb>増賀</rb> <rp>（</rp> <rt>ぞうが</rt> <rp>）</rp></ruby>ひじりのいひけんやうに、<ruby><rb>名聞</rb> <rp>（</rp> <rt>みやうもん</rt> <rp>）</rp></ruby>ぐるしく、仏の御教へにたがふらんとぞおぼゆる。ひたぶる世捨て人は、なかなかあらまほしきかたもありなん。",
         gendaibun:
           "ところで、法師くらい、うらやましくない者はあるまい。彼らについて、「人にまるで木の切れはしのように思われていることよ」と清少納言が書いているのも、ほんとうにもっともなことだ。増賀ひじりが言ったように、出家者にとって名声は無用の束縛であり、仏のみ教えに背くことだろうと思われる。むしろ、まったく世間を超越して修行にはげむ遁世者のほうが、人から無視されるが、かえって好ましいものを持っているだろう。",
+      },
+    ],
+  },
+  {
+    titleName: "古今和歌集",
+    author: "紀貫之",
+    textIndent: "textIndent",
+    text: [
+      {
+        title: "仮名序",
+        kobun:
+          "やまとうたは、人の心を種として、万の言の葉とぞなれりける　世の中にある人、ことわざ繁きものなれば、心に思ふ事を、見るもの聞くものにつけて、言ひ出せるなり　花に鳴く鶯、水に住む蛙の声を聞けば、生きとし生けるもの、いづれか歌をよまざりける　力をも入れずして天地を動かし、目に見えぬ鬼神をもあはれと思はせ、男女のなかをもやはらげ、猛き武士の心をも慰むるは、歌なり・・・<br>",
+        gendaibun:
+          "夫和歌者、託二其根於心地一、發二其花於詞林一者也。人之在レ世不レ能レ無レ爲、思慮易レ遷、哀樂相變。感生二於志一、詠形二於言一。是以逸者其詞樂、怨者其吟悲。可二以述一レ懷、可二以發一レ憤。動二天地一、感二鬼神一、化二人倫一、和二夫婦一、莫レ宜二於和歌一。和歌有二六義一。一曰レ風、二曰レ賦、三曰レ比、四曰レ興、五曰レ雅、六曰レ頌。",
+        phrase: [
+          {
+            phrasekobun: "【つれづれなるままに】",
+            transphrase: "することがなく、単調で、気の紛れることのない状態",
+          },
+          {
+            phrasekobun: "【由無し事（よしなしごと）】",
+            transphrase: "つまらないこと。益のないこと。とりとめのないこと",
+          },
+          {
+            phrasekobun: "【怪し（あやし）】",
+            transphrase: "普通なみでない。変だ。",
+          },
+          {
+            phrasekobun: "【もの狂ほし（ものぐるほし））】",
+            transphrase: "正気を失っている。狂気じみている",
+          },
+        ],
+      },
+      {
+        kobun:
+          "このうた、あめつちのひらけはじまりける（時）よりいできにけり。しかあれども、よにつたはれることは、ひさかたのあめにしては、したてるひめにはじまり、あらがねのつちにしては、すさのをのみことよりぞおこりける。ちはやぶるかみよには、うたのもじもさだまらず、すなほにして、ことのこゝろわきがたかりけらし。人のよとなりて、すさのをのみことよりぞ、みそもじあまりひともじはよみける。",
+        gendaibun:
+          "やまとうたは、人の心を種として、万の言の葉とぞなれりける　世の中にある人、ことわざ繁きものなれば、心に思ふ事を、見るもの聞くものにつけて、言ひ出せるなり　花に鳴く鶯、水に住む蛙の声を聞けば、生きとし生けるもの、いづれか歌をよまざりける　力をも入れずして天地を動かし、目に見えぬ鬼神をもあはれと思はせ、男女のなかをもやはらげ、猛き武士の心をも慰むるは、歌なり・・・",
+        phrase: [
+          {
+            phrasekobun: "【いでや】",
+            transphrase: "いやもう。いや、ほんとに",
+          },
+        ],
       },
     ],
   },
