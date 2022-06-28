@@ -224,14 +224,13 @@ const data = [
     author: "定家 編",
     text: [
       {
-        title: "一番　天智天皇",
+        number: "一番",
+        yomibito: "<ruby>天智<rp>(</rp> <rt>てんち</rt> <rp>)</rp></ruby>天皇",
         kobun:
           "秋の田の　<span class='word'><ruby> 仮庵<rp>( <rt>かりほ <rp>)</ruby>の<ruby> 庵 <rp>( <rt>いほ <rp>)</ruby></span>の　<span class='word'><ruby> 苫 <rp>( <rt>とま <rp>)</ruby>をあらみ<br></span><span class='simonoku'>わが<ruby> 衣手 <rp>( <rt>ころもで <rp>)</ruby>は　露にぬれつつ</span>",
         gendaibun:
-          "秋の田のほとりの仮の小屋は、ほんの間に合わせに荒く葺いた粗末なものだから、その小屋で番をしている私の袖は、ふけゆく夜露にしっとりと濡れつづけていることだ。",
-        // img: "Hyakuninisshu_001.jpg",
-        // eibun:
-        //   "Because of the coarseness of the rush-mat<br>Of the temporary-hut<br>Where the rice of autumn harvest is<br>As far as my sleeve is concerned<br>They are becoming wet with dew (or tears).",
+          "秋の田に造った、刈り穂を見守るための仮小屋の屋根の苫の編み方が荒いので、その中にいる私の袖が夜露にしきりに濡れている。",
+        img: "tenchi.jpg",
         phrase: [
           {
             phrasekobun: "【仮庵の庵】",
@@ -240,18 +239,18 @@ const data = [
           {
             phrasekobun: "【苫を荒み（苫をあらみ）】",
             transphrase:
-              "苫は、スゲ・チガヤなどで、こものように編み、屋根などふくもの。<br>「荒み」は荒いので",
+              "苫は、スゲ・チガヤなどで、こものように編み、屋根などふくもの。<br>「荒み」は荒いために",
           },
           ,
         ],
       },
       {
-        title: "二番　持統天皇",
+        number: "二番",
+        yomibito: "<ruby>持統<rp>(</rp> <rt>じとう</rt> <rp>)</rp></ruby>天皇",
         kobun:
-          "春すぎて　夏 <ruby> 来 <rp>(</rp> <rt>き</rt> <rp>)</rp></ruby>にけらし<span class='word'><ruby> 白妙 <rp>(</rp> <rt>しろたへ</rt> <rp>)</rp></ruby></span>の　<br><span class='simonoku'><ruby> 衣 <rp>(</rp> <rt>ころも</rt> <rp>)</rp></ruby><span class='word'>ほすてふ</span><span class='word'>あまのかぐやま</span>",
+          "春すぎて　夏 <ruby> 来 <rp>(</rp> <rt>き</rt> <rp>)</rp></ruby>にけらし<span class='word'><ruby> 白妙 <rp>(</rp> <rt>しろたへ</rt> <rp>)</rp></ruby></span>の　<br><span class='simonoku'><ruby> 衣 <rp>(</rp> <rt>ころも</rt> <rp>)</rp></ruby><span class='word'>ほすてふ</span><span class='word'><ruby> 天 <rp>(</rp> <rt>あま</rt> <rp>)</rp></ruby>の<ruby>香具山<rp>(</rp> <rt>かぐやま</rt> <rp>)</rp></ruby></span>",
         gendaibun:
-          "いつしか春も過ぎてはや夏が来たらしい。卯花がまさかりで、いかにも白妙の衣を干しているともいうべきこの天の香具山を見ていると",
-        // img: "Hyakuninisshu_002.jpg",
+          "春が過ぎ去って、夏が来たらしい。そこには、白い妙の着物をほすのだと人がいう天の香具山に。",
         phrase: [
           {
             phrasekobun: "【白妙（しろたへ）】",
@@ -260,7 +259,7 @@ const data = [
           },
           {
             phrasekobun: "【ほすてふ】",
-            transphrase: "というふ",
+            transphrase: "ほすというふ",
           },
           {
             phrasekobun: "【天の香久山（あまのかぐやま）】",
@@ -271,11 +270,13 @@ const data = [
         ],
       },
       {
-        title: "三番　柿本人麻呂",
+        number: "三番",
+        yomibito:
+          "<ruby>柿本人麻呂<rp>(</rp> <rt>かきのもとのひとまろ</rt> <rp>)</rp></ruby>",
         kobun:
-          "<span class='word'>あしびき</span>の　<span class='word'><ruby> 山鳥 <rp>(</rp> <rt>やまどり</rt> <rp>)</rp></ruby></span>の尾の　<span class='word'>しだり尾</span>の　<br><span class='simonoku'>長々し夜を　ひとりかも寝む</span>",
+          "<span class='word'>あしびき</span>の　<span class='word'><ruby> 山鳥 <rp>(</rp> <rt>やまどり</rt> <rp>)</rp></ruby></span>の尾の　<span class='word'>しだり尾</span>の　<br><span class='simonoku'>ながながし夜を　ひとりかも寝む</span>",
         gendaibun:
-          "山鳥の尾の垂れさがった、あの長い長いその尾よりも、いっそう長いこの秋の夜を、恋しい人とも離れて、たったひとりでさびしく寝ることであろうかなあ。",
+          "山鳥の垂れた尾のように長い長い夜を、私ひとりで寝ることであろうかなあ。",
         // img: "Hyakuninisshu_003.jpg",
         phrase: [
           {
@@ -295,27 +296,64 @@ const data = [
         ],
       },
       {
-        title: "九十三番　山部赤人",
+        number: "四番",
+        yomibito:
+          "<ruby>山部赤人<rp>(</rp> <rt>やまべのあかひと</rt> <rp>)</rp></ruby>",
         kobun:
-          "世の中は つねにもがもな なぎさこぐ <br><span class='simonoku'>あまの小舟の <ruby>綱手<rp>(</rp> <rt>つなで</rt> <rp>)</rp></ruby>かなしも</span>",
+          "<ruby>田子<rp>(</rp> <rt>たご</rt> <rp>)</rp></ruby>の浦に　<span class='word'>うち</span>出でて見れば　<span class='word'><ruby>白妙<rp>(</rp> <rt>しろたえ</rt> <rp>)</rp></ruby>の</span>　<br><span class='simonoku'>富士の<ruby>高嶺<rp>(</rp> <rt>たかね</rt> <rp>)</rp></ruby>に　雪は降り<span class='word'>つつ</span>",
         gendaibun:
-          "山鳥の尾の、長く長く垂れ下がった尾っぽのように長い夜を（想い人にも逢えないで）独りさびしく寝ることだろうか。",
-        // img: "Hyakuninisshu_003.jpg",
+          "田子の浦に出でて見ると、雪で白くなっている富士山の高い峰に、雪が降り続いている。",
         phrase: [
           {
-            phrasekobun: "【足引きの（あしびきの）】",
-            transphrase: "「山」にかかる枕詞",
+            phrasekobun: "【うち】",
+            transphrase: "意味を強める接頭語",
           },
           {
-            phrasekobun: "【山鳥】",
-            transphrase:
-              "キジ科の鳥で、オスは尾が長い。<br>夜はオスとメスが谷をへだてて寝るという。",
+            phrasekobun: "【白妙の】",
+            transphrase: "白い妙の織物。<br>「の」は「のごとく」。白妙のごとく",
           },
           {
-            phrasekobun: "【しだり尾】",
-            transphrase: "長く垂れさがっている尾",
+            phrasekobun: "【つつ】",
+            transphrase: "継続を表す助詞。降り続いている。",
           },
           ,
+        ],
+      },
+      {
+        number: "五番",
+        yomibito:
+          "<ruby>猿丸大夫<rp>(</rp> <rt>さるまるたゆう</rt> <rp>)</rp></ruby>",
+        kobun:
+          "<ruby>奥山<rp>(</rp> <rt>おくやま</rt> <rp>)</rp></ruby>に　<ruby>紅葉<rp>(</rp> <rt>もみじ</rt> <rp>)</rp></ruby>ふみわけ　鳴く鹿の　<br><span class='simonoku'>声きく時ぞ　<span class='word'>秋は悲しき</span>",
+        gendaibun:
+          "奥深い山に、散った紅葉をふみわけて鳴いている鹿の声を聞くときが、悲しい秋は特に悲しく感じられる。",
+        phrase: [
+          {
+            phrasekobun: "【秋は悲しき】",
+            transphrase:
+              "秋は悲しいものと決められていた。<br>その悲しい秋が更に一段と悲しいことを表している。",
+          },
+        ],
+      },
+      {
+        number: "六番",
+        yomibito:
+          "<ruby>中納言家持<rp>(</rp> <rt>ちゅうなごんやかもち</rt> <rp>)</rp></ruby>",
+        kobun:
+          "<span class='word'>かささぎの　渡せる橋</span>に　<span class='word'>おく霜</span>の　<br><span class='simonoku'>白きをみれば　夜ぞふけにける",
+        gendaibun:
+          "かささぎが天の川に渡している橋に置いている霜が白いのを見ると、天上の夜が更けたことだよ。",
+        phrase: [
+          {
+            phrasekobun: "【かささぎの渡せる橋】",
+            transphrase:
+              "七夕の夜、かささぎという鳥が、天の川の上に翼をひろげて橋を作り、織女星を渡したという中国の七夕伝説",
+          },
+          {
+            phrasekobun: "【おく霜】",
+            transphrase:
+              "霜ができることを「置く」という。",
+          },
         ],
       },
     ],

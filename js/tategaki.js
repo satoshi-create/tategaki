@@ -1,10 +1,7 @@
-// import data from "../data/houjyouki.js";
-// import data from "../data/tsureduregusa.js";
 import datas from "../data/data.js";
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 const data = datas[id];
-console.log(datas[id]);
 
 const { titleName, author, text, textIndent, sectionSpace } = data;
 
@@ -42,7 +39,7 @@ colors.addEventListener("click", function (e) {
     // case "gray":
     //   element.classList.remove(...element.classList);
     //   document.documentElement.classList.add("gray-theme");
-    //   sidebar.classList.remove("translate-sidebar");
+    //   sidebarR.classList.remove("translate-sidebar");
     //   break;
     case "black":
       element.classList.remove(...element.classList);
@@ -61,11 +58,11 @@ mokujiText.innerHTML = `
     <ul>
         ${text
           .map((item, index) => {
-            const { title } = item;
+            const { number, yomibito } = item;
             return `
           <li>
             <a href="#s${index}" class="mokuji-link">
-              ${title ? title : ""}
+              ${yomibito ? `${number} ${yomibito}` : ""}
             </a>
           </li>
           `;
@@ -92,9 +89,10 @@ title.innerHTML = `
 // get container
 container.innerHTML = text
   .map((item, index) => {
-    const { kobun, gendaibun, img, title, eibun } = item;
+    const { kobun, gendaibun, number, yomibito, img, title } = item;
     return ` 
 <section class="section section${index + 1} ${sectionSpace}">
+${yomibito ? `<h3 id="s${index}">${number} ${yomibito}</h3>` : ""}
 ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
   <div class="kobun-text">
     <p class=${textIndent ? textIndent : ""}>
@@ -122,13 +120,7 @@ ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
     `
         : ""
     }    
-    ${
-      eibun
-        ? `
-      <p>${eibun}</p>
-      `
-        : ""
-    }
+
     </div>
   </div>
 </section>
@@ -137,6 +129,7 @@ ${title ? `<h3 id="s${index}">${title}</h3>` : ""}
   .join("");
 
 const sections = document.querySelectorAll(".section");
+
 sections.forEach(function (section) {
   const btn = section.querySelector(".translate-btn.section-btn");
   btn.addEventListener("click", function () {
@@ -150,6 +143,7 @@ const kobunTextP = document.querySelectorAll(".kobun-text p");
 const toggleTextP = document.querySelectorAll(".toggle-text p");
 const translateTextP = document.querySelectorAll(".gendaibun-text");
 const toggleIcon = document.querySelector(".toggle-icon i");
+
 toggleTextBtn.addEventListener("click", function () {
   const result = container.classList.toggle("result");
 
@@ -172,6 +166,7 @@ toggleTextBtn.addEventListener("click", function () {
   });
   kobunTextP.forEach(function (kobun, i) {
     if (result) {
+      console.log(text[1].gendaibun);
       kobun.innerHTML = `${text[i].gendaibun}`;
     } else {
       kobun.innerHTML = `${text[i].kobun}`;
@@ -204,6 +199,7 @@ function wordLink(data, i) {
     });
   });
 }
+
 kobunTextP.forEach(function (item, i) {
   const phrases = text[i].phrase;
   const word = item.querySelectorAll(".word");
@@ -248,16 +244,3 @@ closeText.addEventListener("click", function () {
     }
   });
 });
-
-window.addEventListener(
-  "mousewheel",
-  (e) => {
-    if (e.deltaX === 0) {
-      // e.stopPropagation();
-      // e.preventDefault();
-      // noinspection JSSuspiciousNameCombination
-      window.scrollBy(e.deltaY, 0);
-    }
-  },
-  { passive: false }
-);

@@ -23,7 +23,7 @@ Colors
   border: 1px solid #b3b2b2;
 }
 /* .colors .btn.gray {
-  background: #b3b2b2;
+  background: url(../img/110310200304.png);
 } */
 .colors .btn.black {
   background: #000;
@@ -49,7 +49,8 @@ Toggle text
   align-items: center;
 }
 .header .plus-icon,
-.header .minus-icon {
+.header .minus-icon,
+.header .home-icon {
   font-size: 1.5rem;
 }
 .toggle-text {
@@ -244,19 +245,16 @@ Append Class
 
 .figure {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   padding: 2rem;
   gap: 4rem;
 }
 .figure img {
-  width: 40%;
-  height: 40%;
-  object-fit: cover;
-  vertical-align: bottom;
-  align-self: center;
-  transform: rotate(342deg);
+  width: 100%;
+  height: 100%;
+
 }
-.section .translate-text .figure p{
+.section .translate-text .figure p {
   writing-mode: horizontal-tb;
   margin-bottom: 2rem;
   text-align: right;

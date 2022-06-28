@@ -17,7 +17,7 @@ Global Styles
 :root {
   font-size: 10px;
   --clr-black: #000;
-  --clr-bcg: #fff;
+  --clr-bcg: url(../img/110310200304.png);
   --clr-font: #020202;
   --clr-primary: #4a4f9f;
   --clr-primary-02: #7b7bd1;
@@ -29,7 +29,7 @@ Global Styles
 }
 
 .white-theme {
-  --clr-bcg: #fff;
+  --clr-bcg: url(../img/110310200304.png);
   --clr-font: #020202;
   --clr-primary: #4a4f9f;
   --clr-primary-02: #7b7bd1;
@@ -84,8 +84,6 @@ body {
   font-family: "Noto Serif JP", serif;
   color: var(--clr-font);
   background: var(--clr-bcg);
-  background-image: url(../img/110310200304.png);
-  /* backdrop-filter: brightness(0.9); */
 }
 h1 {
   color: var(--clr-primary);
