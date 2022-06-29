@@ -58,21 +58,25 @@ mokujiText.innerHTML = `
     <ul>
         ${text
           .map((item, index) => {
-            const { number, yomibito } = item;
-            return `
-          <li>
-            <a href="#s${index}" class="mokuji-link">
-              ${yomibito ? `${number} ${yomibito}` : ""}
-            </a>
-          </li>
-          `;
+            const { number, yomibito, chapter } = item;
+            return `${
+              chapter
+                ? `
+            <li>
+              <a href="#s${index}" class="mokuji-link js-smooth-scroll">
+                ${chapter}
+              </a>
+            </li>
+            `
+                : ""
+            }`;
           })
-          .join("")}
+          .join("")}        
     </ul>
 `;
 
 const mokujiLink = document.querySelectorAll(".mokuji-link");
-mokujiLink.forEach(function (btn) {
+mokujiLink.forEach(function (btn, i) {
   btn.addEventListener("click", function () {
     sidebarR.classList.remove("translate-sidebar");
   });
@@ -89,11 +93,11 @@ title.innerHTML = `
 // get container
 container.innerHTML = text
   .map((item, index) => {
-    const { kobun, gendaibun, number, yomibito, img, title } = item;
+    const { kobun, gendaibun, number, yomibito, img, chapter } = item;
     return ` 
-<section class="section section${index + 1} ${sectionSpace}">
-${yomibito ? `<h3 id="s${index}">${number} ${yomibito}</h3>` : ""}
-${title ? `<h3 id="s${index}">${title}</h3>` : ""}
+    <section class="section section${index + 1} ${sectionSpace}">
+    ${yomibito ? `<h3 id="s${index}">${number} ${yomibito}</h3>` : ""}
+    ${chapter ? `<h3 id="s${index}">${chapter}</h3>` : ""}
   <div class="kobun-text">
     <p class=${textIndent ? textIndent : ""}>
       ${kobun}
@@ -242,5 +246,29 @@ closeText.addEventListener("click", function () {
     if (section.classList.contains("show-text")) {
       section.classList.remove("show-text");
     }
+  });
+});
+
+var speed = 50;
+//マウスホイールで横移動
+$("html").mousewheel(function (event, mov) {
+  //ie firefox
+  $(this).scrollLeft($(this).scrollLeft() - mov * speed);
+  //webkit
+  $("body").scrollLeft($("body").scrollLeft() - mov * speed);
+  //return false(縦スクロール付加)にするとUnable to preventDefault...というエラーがでたため、処理を書き換え
+  return true;
+});
+
+document.addEventListener("click", (e) => {
+  const target = e.target;
+  // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
+  if (!target.classList.contains("js-smooth-scroll")) return;
+  e.preventDefault();
+  const targetId = target.hash;
+  console.log(targetId);
+  document.querySelector(targetId).scrollIntoView({
+    behavior: "smooth",
+    block: "start",
   });
 });

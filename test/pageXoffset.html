@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* html,
+  body {
+    overflow-x: visible;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+  } */
+
+  body {
+    /* writing-mode: vertical-rl; */
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <a href="#a" class="js-smooth-scroll">01</a>
+    <div></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="#b" class="js-smooth-scroll">01</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="a">01</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="b">01</div>
+  </div>
+
+</body>
+<script src="../js/jquery-2.2.4.min.js"></script>
+<!-- <script src="./js/jquery.mousewheel.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+
+  //  1 jquery
+  // // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない。。）
+  // $('a[href^="#"]').click(function () {
+  //   // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+  //   var adjust = 0;
+  //   // スクロールの速度（ミリ秒）
+  //   var speed = 400;
+  //   // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
+  //   var href = $(this).attr("href");
+  //   // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+  //   var target = $(href == "#" || href == "" ? 'html' : href);
+  //   // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
+  //   var position = target.offset().top + adjust;
+  //   // スムーススクロール linear（等速） or swing（変速）
+  //   $('body,html').animate({ scrollTop: position }, speed, 'swing');
+  //   return false;
+  // });
+
+  // 2 javascript
+  // 1. すべてのhref="#"のaタグを取得
+  // const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
+
+  // smoothScrollTrigger.forEach(function (trigger, i) {
+
+  //   trigger.addEventListener('click', function (e) {
+  //     console.log("trigger");
+  //     // 3. ターゲットの位置を取得
+  //     e.preventDefault();
+  //     let href = smoothScrollTrigger[i].getAttribute('href'); // 各a要素のリンク先を取得
+  //     let targetElement = document.getElementById(href.replace('#', '')); // リンク先の要素（コンテンツ）を取得
+
+  //     const rect = targetElement.getBoundingClientRect().left; // ブラウザからの高さを取得
+  //     console.log(rect);
+  //     const offset = window.pageYOffset; // 現在のスクロール量を取得
+  //     console.log(offset);
+  //     const gap = 60; // 固定ヘッダー分の高さ
+  //     const target = rect + offset - gap; //最終的な位置を割り出す
+
+  //     // 4. スムースにスクロール
+  //     window.scrollTo({
+  //       left: target,
+  //       behavior: 'smooth',
+  //     });
+
+  //   });
+
+  // })
+
+  // 3 smooth-scroll.js
+  // var scroll = new SmoothScroll('a[href^="#"]');
+
+  // 4 scrollIntoView
+  document.addEventListener("click", e => {
+    const target = e.target;
+    // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
+    if (!target.classList.contains("js-smooth-scroll")) return;
+    e.preventDefault();
+    const targetId = target.hash;
+    console.log(targetId);
+    document.querySelector(targetId).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+  
+
+</script>
+
+</html>

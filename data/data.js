@@ -5,7 +5,7 @@ const data = [
     sectionSpace: "sectionSpace",
     text: [
       {
-        title: "一 ゆく河の流れ",
+        chapter: "一 ゆく河の流れ",
         kobun:
           "ゆく河のながれは絶えずして、 <br>しかももとの水にあらず。 <br>よどみに浮ぶ<span class='word'>うたかた</span>は、 <br>かつ消えかつ結びて、久しくとどまりたるためしなし。",
         gendaibun:
@@ -62,7 +62,7 @@ const data = [
         ],
       },
       {
-        title: "二 安元の大火",
+        chapter: "二 安元の大火",
         kobun:
           "<ruby> <rb>予</rb> <rp>（</rp> <rt>われ</rt> <rp>）</rp></ruby>ものの心を知れりしより、<br><ruby> <rb>四十</rb> <rp>（</rp> <rt>よそぢ</rt> <rp>）</rp></ruby>余りの<ruby> <rb>春秋</rb> <rp>（</rp> <rt>はるあき</rt> <rp>）</rp></ruby>を送れる間に、<br>世の不思議を見る事、<br>やや度々になりぬ。",
         gendaibun:
@@ -141,7 +141,7 @@ const data = [
         ],
       },
       {
-        title: "三 治承の辻風",
+        chapter: "三 治承の辻風",
         kobun:
           "又<span class='word'> <ruby> <rb>治承</rb> <rp>（ <rt>ぢしょう <rp>） </ruby></span>四年卯月のころ、<br><span class='word'><ruby> <rb>中御門京極</rb> <rp>（ <rt>なかのみかどきやうごく <rp>） </ruby></span>のほどより、<br>大きなる<ruby> <rb>辻風</rb> <rp>（ <rt>つじかぜ <rp>）</ruby>おこりて、<br>六条わたりまで吹ける事侍りき。",
         gendaibun:
@@ -220,7 +220,7 @@ const data = [
     ],
   },
   {
-    titleName: "百人一首",
+    chapterName: "百人一首",
     author: "定家 編",
     text: [
       {
@@ -364,7 +364,7 @@ const data = [
     textIndent: "textIndent",
     text: [
       {
-        title: "序段 つれづれなるままに",
+        chapter: "序段 つれづれなるままに",
         kobun:
           "<span class='word'>つれづれなるままに</span>、<ruby> <rb>日暮らし</rb> <rp>（</rp> <rt>ひくらし</rt> <rp>）</rp></ruby>、<ruby> <rb>硯</rb> <rp>（</rp> <rt>すずり</rt> <rp>）</rp></ruby>にむかひて、心にうつりゆく<span class='word'>よしなしごと</span>を、そこはかとなく書きつくれば、<span class='word'>あやし</span>うこそ<span class='word'>ものぐるほしけれ。</span>",
         gendaibun:
@@ -389,7 +389,7 @@ const data = [
         ],
       },
       {
-        title: "第一段 いでや、この世に生れては",
+        chapter: "第一段 いでや、この世に生れては",
         kobun:
           "<span class='word'>いでや</span>、この世に生まれては、願はしかるべき事こそ多かめれ。",
         gendaibun:

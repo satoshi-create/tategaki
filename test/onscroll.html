@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>onscroll test</title>
+<script type="text/javascript">
+window.onscroll = scroll;
+function scroll () {
+ alert("スクロールを検知! " + window.pageXOffset + " " + window.pageYOffset);
+ //注意: window.innerWidthとwindow.innerHeightを使用して、
+ //      表示領域の幅と高さにアクセスすることが可能です。
+}
+</script>
+</head>
+<body>
+  <p>windowのサイズを縮め、</p>
+  <p>スクロールバーを使用して、</p>
+  <p>ページコンテンツを</p>
+  <p>window内で</p>
+  <p>スクロールしてみてください。</p>
+</body>
+</html>
