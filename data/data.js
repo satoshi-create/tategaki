@@ -220,7 +220,7 @@ const data = [
     ],
   },
   {
-    chapterName: "百人一首",
+    titleName: "百人一首",
     author: "定家 編",
     text: [
       {
